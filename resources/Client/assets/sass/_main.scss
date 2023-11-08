@@ -3,10 +3,6 @@
 @use "theme";
 
 h1 {
-    @extend %theme;
+    @extend %theme-ttl;
     text-align: right;
-
-    @include m.medium-device-down {
-        color: blue;
-    }
 }
