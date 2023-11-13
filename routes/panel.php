@@ -4,6 +4,7 @@ use App\Http\Controllers\AuditActivityController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\FileResponseController;
+use App\Http\Controllers\OptionController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\StudentsSubjectController;
@@ -231,6 +232,14 @@ Route::prefix('painel/')->group(function () {
         Route::resource('avaliacao', QuestionController::class)
             ->names('admin.dashboard.question')
             ->parameters(['avaliacao' => 'question']);
+        //OPTIONS
+        Route::resource('resposta', OptionController::class)
+            ->names('admin.dashboard.option')
+            ->parameters(['resposta' => 'option']);
+        Route::post('resposta/delete', [OptionController::class, 'destroySelected'])
+            ->name('admin.dashboard.option.destroySelected');
+        Route::post('resposta/sorting', [OptionController::class, 'sorting'])
+            ->name('admin.dashboard.option.sorting');
 
         // LOGOUT
         Route::get('logout', [AuthController::class, 'logout'])->name('admin.dashboard.user.logout');

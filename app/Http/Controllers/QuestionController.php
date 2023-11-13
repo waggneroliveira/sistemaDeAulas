@@ -76,12 +76,8 @@ class QuestionController extends Controller
      */
     public function edit(Question $question)
     {
-        $question = Question::findOrFail($question->id);
-        $options = json_decode($question->options, true);
-//        dd($question);
         return view('Admin.cruds.question.edit', [
             'question'=>$question,
-            'options'=>$options
         ]);
     }
 
@@ -98,14 +94,7 @@ class QuestionController extends Controller
 
         try {
             DB::beginTransaction();
-                $question->fill([
-                    'question_text' => $data['question_text'],
-                ])->save();
-
-
-                $options = json_decode($data['options'], true);
-                $question->options = $options;
-                $question->save();
+                $question->fill($data)->save();
             DB::commit();
             Session::flash('success', 'Avaliação atualizada com sucesso!');
             return redirect()->route('admin.dashboard.question.index');
