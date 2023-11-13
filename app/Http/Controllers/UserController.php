@@ -104,7 +104,6 @@ class UserController extends Controller
             DB::commit();
             return redirect()->route('admin.dashboard.user.index');
         }catch(\Exception $exception){
-            dd($exception);
             DB::rollBack();
             Session::flash('error', 'Erro ao cadastrar o Professor!');
             return redirect()->back();

@@ -4,6 +4,7 @@ use App\Http\Controllers\AuditActivityController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\FileResponseController;
+use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\StudentsSubjectController;
 use App\Http\Controllers\SubjectController;
@@ -146,8 +147,6 @@ Route::prefix('painel/')->group(function () {
         //SHOW
         Route::get('materias/deletados/show', [SubjectController::class, 'deletedShow'])
             ->name('admin.dashboard.subject.show');
-//        Route::get('materias/adicionar-aluno-a-materia/{subject}', [SubjectController::class, 'addStudentSubject'])
-//            ->name('admin.dashboard.subject.addStudentSubject');
         Route::post('materias/deletados/show/search', [SubjectController::class, 'search'])
             ->name('admin.dashboard.subject.show.search');
         Route::post('materias/deletados/show/delete', [SubjectController::class, 'destroySelectedForced'])
@@ -227,6 +226,11 @@ Route::prefix('painel/')->group(function () {
             ->name('admin.dashboard.contact.sorting');
         Route::post('contato/search', [ContactController::class, 'index'])
             ->name('admin.dashboard.contact.search');
+
+        //QUESTIONS
+        Route::resource('avaliacao', QuestionController::class)
+            ->names('admin.dashboard.question')
+            ->parameters(['avaliacao' => 'question']);
 
         // LOGOUT
         Route::get('logout', [AuthController::class, 'logout'])->name('admin.dashboard.user.logout');
