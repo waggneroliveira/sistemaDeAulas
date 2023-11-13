@@ -15,6 +15,8 @@ class AuditActivity extends Model
     public const STUDENTS = 'Alunos';
     public const FILES = 'Atividades';
     public const ROLES = 'Grupos';
+    public const QUESTIONS = 'Avaliação';
+    public const OPTIONS = 'Resposta';
 
     public static function getModelName($subjectType)
     {
@@ -31,6 +33,10 @@ class AuditActivity extends Model
                 return self::FILES;
             case Role::class:
                 return self::ROLES;
+            case Question::class:
+                return self::QUESTIONS;
+            case Option::class:
+                return self::OPTIONS;
             default:
                 return 'Desconhecido';
         }

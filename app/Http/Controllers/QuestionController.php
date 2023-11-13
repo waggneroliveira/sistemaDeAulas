@@ -17,12 +17,9 @@ class QuestionController extends Controller
     public function index()
     {
         $questions = Question::paginate(15);
-        foreach ($questions as $question)
-        $options = json_decode($question->options, true);
 
         return view('Admin.cruds.question.index', [
             'questions'=>$questions,
-            'options'=>$options
         ]);
     }
 
@@ -48,16 +45,12 @@ class QuestionController extends Controller
 
         try {
             DB::beginTransaction();
-                if ($question = Question::create($data)){
-                    $question->question_text = $request->input('question_text');
-                    $question->options = json_encode($request->input('options'));
-                    $question->save();
+                if (Question::create($data)){
                     Session::flash('success', 'Avaliação cadastrada com sucesso!');
                 }
             DB::commit();
             return redirect()->route('admin.dashboard.question.index');
         }catch (\Exception $exception){
-            dd($exception);
             DB::rollBack();
             Session::flash('error', 'Erro ao cadastrar avaliação');
             return redirect()->back();

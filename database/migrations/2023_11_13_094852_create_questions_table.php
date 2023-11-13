@@ -16,8 +16,8 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->string('question_text', 255)->nullable();
-            $table->json('options')->nullable();
-            $table->integer('correct_option')->nullable();
+            $table->boolean('active')->default(0);
+            $table->softDeletes();
             $table->timestamps();
         });
     }
