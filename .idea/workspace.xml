@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c52757-a25a-4967-ba7d-f69341ff20bb" name="Changes" comment="Criação de Questions" />
+    <list default="true" id="e2c52757-a25a-4967-ba7d-f69341ff20bb" name="Changes" comment="Criação de Options" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,7 +151,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;feature/avaliacao/v0.0.1&quot;,
     &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/estudos/sistemaDeAulas/resources/views/Admin/cruds/question&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/estudos/sistemaDeAulas/resources/views/Admin/cruds/option&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -167,11 +167,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\estudos\sistemaDeAulas\resources\views\Admin\cruds\option" />
       <recent name="C:\xampp\htdocs\estudos\sistemaDeAulas\resources\views\Admin\cruds\question" />
       <recent name="C:\xampp\htdocs\estudos\sistemaDeAulas\resources\views\Admin\cruds\audit" />
       <recent name="C:\xampp\htdocs\estudos\sistemaDeAulas\resources\views\Admin\cruds\fileResponse.blade.php" />
       <recent name="C:\xampp\htdocs\estudos\sistemaDeAulas\resources\views\Admin\cruds\file" />
-      <recent name="C:\xampp\htdocs\estudos\sistemaDeAulas\resources\views\Admin\cruds\course" />
     </key>
   </component>
   <component name="RunManager">
@@ -232,6 +232,7 @@
       <workItem from="1699825258537" duration="2892000" />
       <workItem from="1699873519468" duration="2660000" />
       <workItem from="1699878702538" duration="16305000" />
+      <workItem from="1699908315170" duration="7145000" />
     </task>
     <task id="LOCAL-00001" summary="create model, controller and migration of subject, student and pivot table student_has_subject">
       <option name="closed" value="true" />
@@ -521,7 +522,31 @@
       <option name="project" value="LOCAL" />
       <updated>1699896302152</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Criação de Questions">
+      <option name="closed" value="true" />
+      <created>1699908361014</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1699908361014</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Criação de Options">
+      <option name="closed" value="true" />
+      <created>1699918678414</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1699918678414</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Criação de Options">
+      <option name="closed" value="true" />
+      <created>1699919020124</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1699919020124</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionei restauração e remoção permantente em alunos e melhorei o codigo do search em usuario" />
     <MESSAGE value="Mudança da nome da permissao de usuario para professor" />
     <MESSAGE value="CRUD de materias" />
     <MESSAGE value="permissao de usuario e ajustes em materias" />
@@ -564,7 +588,8 @@
     <MESSAGE value="Ajuste auditoria, atribuindo nome a model em auditoria" />
     <MESSAGE value="Ajuste auditoria, log tabela pivot" />
     <MESSAGE value="Criação de Questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação de Questions" />
+    <MESSAGE value="Criação de Options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação de Options" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
