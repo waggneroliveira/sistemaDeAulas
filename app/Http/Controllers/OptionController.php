@@ -7,14 +7,13 @@ use Illuminate\Http\Request;
 
 class OptionController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $options = Option::get();
+
+        return view('Admin.cruds.question.index', [
+            'options'=>$options,
+        ]);
     }
 
     /**

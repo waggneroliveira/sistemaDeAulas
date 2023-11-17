@@ -37,7 +37,7 @@
                 <div class="row mb-3 justify-content-end flex-nowrap">
                     @can('atividade.remover')
                         <div class="col-6 ps-3">
-                            <button id="btSubmitDelete" data-route="{{route('admin.dashboard.option.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>
+{{--                            <button id="btSubmitDelete" data-route="{{route('admin.dashboard.option.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>--}}
                         </div>
                     @endcan
                     <div class="row col-6 d-flex justify-content-end me-3 p-0">
@@ -56,7 +56,7 @@
                                                 {!! Form::model(null, ['route' => 'admin.dashboard.option.store', 'class'=>'parsley-examples', 'options' => true]) !!}
                                                 @include('Admin.cruds.option.form')
                                                 {!! Form::button('Cadastrar', ['class'=>'btn btn-primary waves-effect waves-light float-end me-3 width-lg', 'type' => 'submit']) !!}
-                                                <a href="{{route('admin.dashboard.course.edit', ['course' => $course])}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Cancelar</a>
+                                                <a href="{{route('admin.dashboard.option.edit', ['options' => $option->id])}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Cancelar</a>
                                                 {!! Form::close() !!}
                                             </div>
                                         </div>
@@ -82,8 +82,8 @@
                         </tr>
                         </thead>
 
-                        <tbody id="atividade" data-route="{{route('admin.dashboard.option.sorting')}}">
-                        @foreach ($course->option as $key => $option)
+                        <tbody id="atividade">{{--data-route="{{route('admin.dashboard.option.sorting')}}"--}}
+                        @foreach ($options as $key => $option)
                             <tr data-code="{{$option->id}}">
                                 <td><span class="btnDrag mdi mdi-drag-horizontal font-22"></span></td>
                                 <td class="bs-checkbox">
@@ -96,11 +96,11 @@
                                     <div class="row d-flex justify-content-center">
                                         @can(['atividade.editar', 'atividade.visualizar'])
                                             <div class="col-4">
-                                                <a href="{{route('admin.dashboard.option.edit', ['option' => $option->id])}}"><i class="btn-icon mdi mdi-square-edit-outline"></i></a>
+                                                <a href="{{route('admin.dashboard.option.edit', ['options' => $option->id])}}"><i class="btn-icon mdi mdi-square-edit-outline"></i></a>
                                             </div>
                                         @endcan
                                         @can(['atividade.remover', 'atividade.visualizar'])
-                                            <form action="{{route('admin.dashboard.option.destroy',['option' => $option->id])}}" class="col-4" method="POST">
+                                            <form action="{{route('admin.dashboard.option.destroy',['options' => $option->id])}}" class="col-4" method="POST">
                                                 @method('DELETE') @csrf
                                                 <button type="button" class="btn-icon btSubmitDeleteItem"><i class="mdi mdi-trash-can"></i></button>
                                             </form>
@@ -124,7 +124,7 @@
             }
             // Redirecionar para o âncora #atividade
             setTimeout(function() {
-                window.location.href = "{{ route('admin.dashboard.course.edit', ['course' => $course]) }}#atividade";
+                window.location.href = "{{ route('admin.dashboard.option.edit', ['options' => $option]) }}#atividade";
             }, 500);
         });
     </script>
