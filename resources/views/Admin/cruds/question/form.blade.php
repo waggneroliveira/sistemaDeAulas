@@ -1,12 +1,12 @@
 <div class="row col-12">
-    <div class="col-12 col-lg-6">
+    <div class="col-12 col-lg-12">
         <div class="card card-body">
             <div class="mb-3">
                 {!! Form::label('complete-editor', 'Questão', ['class'=>'form-label']) !!}
                 {!! Form::textarea('question_text', null, [
                     'class'=>'form-control CkEditorColumn',
                     'id'=>'complete-editor',
-                    'data-height' => 150
+                    'data-height' => 250
                 ]) !!}
             </div>
         </div> <!-- end card-body-->

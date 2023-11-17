@@ -15,5 +15,10 @@ class Option extends Model
         'response',
         'correct_option',
         'sorting',
+        'question_id'
     ];
+
+    public function question(){
+        return $this->hasMany(Question::class,'id');
+    }
 }

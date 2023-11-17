@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
-                            <h4 class="page-title">Atividades</h4>
+                            <h4 class="page-title">Resposta</h4>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                                                 {!! Form::model(null, ['route' => 'admin.dashboard.option.store', 'class'=>'parsley-examples', 'options' => true]) !!}
                                                 @include('Admin.cruds.option.form')
                                                 {!! Form::button('Cadastrar', ['class'=>'btn btn-primary waves-effect waves-light float-end me-3 width-lg', 'type' => 'submit']) !!}
-                                                <a href="{{route('admin.dashboard.option.edit', ['options' => $option->id])}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Cancelar</a>
+{{--                                                <a href="{{route('admin.dashboard.option.edit', ['options' => $option->id])}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Cancelar</a>--}}
                                                 {!! Form::close() !!}
                                             </div>
                                         </div>
@@ -75,9 +75,8 @@
                             <th class="bs-checkbox">
                                 <label><input name="btnSelectAll" value="btnDeleteListLink" type="checkbox"></label>
                             </th>
-                            <th class="text-center">Titulo</th>
-                            <th class="text-center">Descrição</th>
-                            <th class="text-center">Data Final</th>
+                            <th class="text-center">Resposta</th>
+                            <th class="text-center">Alternativa correta</th>
                             <th class="text-center">Ações</th>
                         </tr>
                         </thead>
@@ -89,9 +88,13 @@
                                 <td class="bs-checkbox">
                                     <label><input data-index="{{$key}}" name="btnSelectItem" class="btnSelectItem" type="checkbox" value="{{$option->id}}"></label>
                                 </td>
-                                <td>{{$option->title}}</td>
-                                <td>{{substr(strip_tags($option->description), 0, 100)}}</td>
-                                <td>{{Carbon\Carbon::parse($option->end_date)->format('d/m/Y')}}</td>
+                                <td>{{substr(strip_tags($option->response), 0, 100)}}</td>
+                                <td>
+                                    @switch($option->correct_option)
+                                        @case(0) <span class="badge bg-danger">Errado</span> @break
+                                        @case(1) <span class="badge bg-success">Correto</span> @break
+                                    @endswitch
+                                </td>
                                 <td>
                                     <div class="row d-flex justify-content-center">
                                         @can(['atividade.editar', 'atividade.visualizar'])
@@ -124,7 +127,7 @@
             }
             // Redirecionar para o âncora #atividade
             setTimeout(function() {
-                window.location.href = "{{ route('admin.dashboard.option.edit', ['options' => $option]) }}#atividade";
+                window.location.href = "{{ route('admin.dashboard.question.edit', ['question' => $question]) }}#atividade";
             }, 500);
         });
     </script>

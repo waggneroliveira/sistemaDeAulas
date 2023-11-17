@@ -4,37 +4,28 @@ namespace App\Http\Controllers;
 
 use App\Models\Option;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class OptionController extends Controller
 {
-    public function index()
-    {
-        $options = Option::get();
-
-        return view('Admin.cruds.question.index', [
-            'options'=>$options,
-        ]);
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        try {
+            DB::beginTransaction();
+                $data['correct_option'] = $request->correct_option ? 1 : 0;
+                Option::create($data);
+            DB::commit();
+            Session::flash('success', 'Resposta cadastrada com sucesso!');
+            Return redirect()->back();
+        }catch (\Exception $exception){
+            dd($exception);
+            DB::rollBack();
+            Session::flash('error', 'Erro ao cadastrar resposta');
+            return redirect()->back();
+        }
     }
 
     /**

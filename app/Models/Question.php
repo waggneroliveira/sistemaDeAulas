@@ -17,4 +17,8 @@ class Question extends Model
         'correct_option',
         'active',
     ];
+
+    public function options(){
+        return $this->belongsTo(Option::class, 'id');
+    }
 }

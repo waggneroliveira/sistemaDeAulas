@@ -12,8 +12,8 @@ class QuestionController extends Controller
 {
     public function index()
     {
-        $questions = Question::paginate(15);
-
+        $questions = Question::with('options')->paginate(15);
+//dd($questions);
         return view('Admin.cruds.question.index', [
             'questions'=>$questions,
         ]);
@@ -44,7 +44,8 @@ class QuestionController extends Controller
 
     public function edit(Question $question)
     {
-        $options = Option::get();
+        $options = Option::with('question')->get();
+//        dd($question);
         return view('Admin.cruds.question.edit', [
             'question'=>$question,
             'options'=>$options,
