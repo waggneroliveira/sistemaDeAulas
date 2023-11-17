@@ -21,4 +21,8 @@ class Option extends Model
     public function question(){
         return $this->hasMany(Question::class,'id');
     }
+
+    public function scopeSorting($query){
+        return $query->orderBy('sorting', 'ASC');
+    }
 }

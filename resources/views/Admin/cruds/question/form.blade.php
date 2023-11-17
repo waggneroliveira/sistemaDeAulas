@@ -6,7 +6,7 @@
                 {!! Form::textarea('question_text', null, [
                     'class'=>'form-control CkEditorColumn',
                     'id'=>'complete-editor',
-                    'data-height' => 250
+                    'data-height' => 200
                 ]) !!}
             </div>
         </div> <!-- end card-body-->

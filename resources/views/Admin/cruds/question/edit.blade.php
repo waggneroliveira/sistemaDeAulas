@@ -30,18 +30,18 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
-                            <h4 class="page-title">Resposta</h4>
+                            <h4 class="page-title">Opções</h4>
                         </div>
                     </div>
                 </div>
                 <div class="row mb-3 justify-content-end flex-nowrap">
-                    @can('atividade.remover')
+                    @can('resposta.remover')
                         <div class="col-6 ps-3">
-{{--                            <button id="btSubmitDelete" data-route="{{route('admin.dashboard.option.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>--}}
+                            <button id="btSubmitDelete" data-route="{{route('admin.dashboard.option.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>
                         </div>
                     @endcan
                     <div class="row col-6 d-flex justify-content-end me-3 p-0">
-                        @can('atividade.criar')
+                        @can('resposta.criar')
                             <div style="width: 165px">
                                 <a class="btn btn-success float-end" data-bs-toggle="modal" data-bs-target="#modal-option">Adicionar novo <i class="mdi mdi-plus"></i></a>
 
@@ -49,7 +49,7 @@
                                     <div class="modal-dialog" style="max-width: 800px;">
                                         <div class="modal-content">
                                             <div class="modal-header p-3 pt-2 pb-2">
-                                                <h4 class="page-title">Respostas</h4>
+                                                <h4 class="page-title">Opções</h4>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body p-3 pt-0 pb-3">
@@ -81,37 +81,53 @@
                         </tr>
                         </thead>
 
-                        <tbody id="atividade">{{--data-route="{{route('admin.dashboard.option.sorting')}}"--}}
-                        @foreach ($options as $key => $option)
-                            <tr data-code="{{$option->id}}">
-                                <td><span class="btnDrag mdi mdi-drag-horizontal font-22"></span></td>
-                                <td class="bs-checkbox">
-                                    <label><input data-index="{{$key}}" name="btnSelectItem" class="btnSelectItem" type="checkbox" value="{{$option->id}}"></label>
-                                </td>
-                                <td>{{substr(strip_tags($option->response), 0, 100)}}</td>
-                                <td>
-                                    @switch($option->correct_option)
-                                        @case(0) <span class="badge bg-danger">Errado</span> @break
-                                        @case(1) <span class="badge bg-success">Correto</span> @break
-                                    @endswitch
-                                </td>
-                                <td>
-                                    <div class="row d-flex justify-content-center">
-                                        @can(['atividade.editar', 'atividade.visualizar'])
-                                            <div class="col-4">
-                                                <a href="{{route('admin.dashboard.option.edit', ['options' => $option->id])}}"><i class="btn-icon mdi mdi-square-edit-outline"></i></a>
-                                            </div>
-                                        @endcan
-                                        @can(['atividade.remover', 'atividade.visualizar'])
-                                            <form action="{{route('admin.dashboard.option.destroy',['options' => $option->id])}}" class="col-4" method="POST">
-                                                @method('DELETE') @csrf
-                                                <button type="button" class="btn-icon btSubmitDeleteItem"><i class="mdi mdi-trash-can"></i></button>
-                                            </form>
-                                        @endcan
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
+                        <tbody id="resposta" data-route="{{route('admin.dashboard.option.sorting')}}">
+                            @foreach ($options as $key => $option)
+                                <tr data-code="{{$option->id}}">
+                                    <td><span class="btnDrag mdi mdi-drag-horizontal font-22"></span></td>
+                                    <td class="bs-checkbox">
+                                        <label><input data-index="{{$key}}" name="btnSelectItem" class="btnSelectItem" type="checkbox" value="{{$option->id}}"></label>
+                                    </td>
+                                    <td>{{substr(strip_tags($option->response), 0, 100)}}</td>
+                                    <td>
+                                        @switch($option->correct_option)
+                                            @case(0) <span class="badge bg-danger">Errado</span> @break
+                                            @case(1) <span class="badge bg-success">Correto</span> @break
+                                        @endswitch
+                                    </td>
+                                    <td>
+                                        <div class="row d-flex justify-content-center">
+                                            @can(['resposta.editar', 'resposta.visualizar'])
+                                                <div class="col-4">
+                                                    <a data-bs-toggle="modal" data-bs-target="#modal-option-{{$option->id}}"><i class="btn-icon mdi mdi-square-edit-outline"></i></a>
+
+                                                    <div id="modal-option-{{$option->id}}" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                                                        <div class="modal-dialog" style="max-width: 800px;">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header p-3 pt-2 pb-2">
+                                                                    <h4 class="page-title">Opções</h4>
+                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body p-3 pt-0 pb-3">
+                                                                    {!! Form::model($option, ['route' => ['admin.dashboard.option.show', $option->id], 'class'=>'parsley-examples']) !!}
+                                                                    @include('Admin.cruds.option.form')
+                                                                    {!! Form::close() !!}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endcan
+                                            @can(['resposta.remover', 'resposta.visualizar'])
+                                                <form action="{{route('admin.dashboard.option.destroy',['options' => $option->id])}}" class="col-4" method="POST">
+                                                    @method('DELETE') @csrf
+                                                    <button type="button" class="btn-icon btSubmitDeleteItem"><i class="mdi mdi-trash-can"></i></button>
+                                                </form>
+                                            @endcan
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -121,13 +137,13 @@
     @include('Admin.components.links.resourcesCreateEdit')
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var element = document.querySelector("#atividade");
+            var element = document.querySelector("#resposta");
             if (element) {
                 element.scrollIntoView();
             }
-            // Redirecionar para o âncora #atividade
+            // Redirecionar para o âncora #resposta
             setTimeout(function() {
-                window.location.href = "{{ route('admin.dashboard.question.edit', ['question' => $question]) }}#atividade";
+                window.location.href = "{{ route('admin.dashboard.question.edit', ['question' => $question]) }}#resposta";
             }, 500);
         });
     </script>

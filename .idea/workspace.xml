@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e2c52757-a25a-4967-ba7d-f69341ff20bb" name="Changes" comment="Cruds Options">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Option.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Option.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/cruds/option/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/cruds/option/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/cruds/question/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/cruds/question/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/cruds/question/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/cruds/question/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Admin/cruds/question/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/cruds/question/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +249,7 @@
       <workItem from="1700240557299" duration="51000" />
       <workItem from="1700242199254" duration="485000" />
       <workItem from="1700242993767" duration="618000" />
+      <workItem from="1700256597371" duration="3282000" />
     </task>
     <task id="LOCAL-00001" summary="create model, controller and migration of subject, student and pivot table student_has_subject">
       <option name="closed" value="true" />

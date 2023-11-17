@@ -45,8 +45,7 @@
                                             <th class="bs-checkbox">
                                                 <label><input name="btnSelectAll" type="checkbox"></label>
                                             </th>
-                                            <th>Nome do curso</th>
-                                            <th>Imagem</th>
+                                            <th>Questão</th>
                                             <th>Status</th>
                                             <th>Ações</th>
                                         </tr>
@@ -59,13 +58,13 @@
                                                 <td class="bs-checkbox">
 {{--                                                    <label><input data-index="{{$key}}" name="btnSelectItem" class="btnSelectItem" type="checkbox" value="{{$question->id}}"></label>--}}
                                                 </td>
-                                                <td>{{$question->title}}</td>
-{{--                                                <td>--}}
-{{--                                                    @switch($question->active)--}}
-{{--                                                        @case(0) <span class="badge bg-danger">Inativo</span> @break--}}
-{{--                                                        @case(1) <span class="badge bg-success">Ativo</span> @break--}}
-{{--                                                    @endswitch--}}
-{{--                                                </td>--}}
+                                                <td>{{substr(strip_tags($question->question_text), 0, 100)}}</td>
+                                                <td>
+                                                    @switch($question->active)
+                                                        @case(0) <span class="badge bg-danger">Inativo</span> @break
+                                                        @case(1) <span class="badge bg-success">Ativo</span> @break
+                                                    @endswitch
+                                                </td>
                                                 <td>
                                                     <div class="row justify-content-start">
                                                         @can('curso.editar')
