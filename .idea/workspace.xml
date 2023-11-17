@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c52757-a25a-4967-ba7d-f69341ff20bb" name="Changes" comment="Criação de Options">
+    <list default="true" id="e2c52757-a25a-4967-ba7d-f69341ff20bb" name="Changes" comment="Cruds Options">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OptionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/QuestionController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/cruds/option/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/cruds/option/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Admin/cruds/question/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Admin/cruds/question/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/panel.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/panel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,6 +238,10 @@
       <workItem from="1699981663764" duration="684000" />
       <workItem from="1700138006193" duration="1464000" />
       <workItem from="1700157918747" duration="606000" />
+      <workItem from="1700220203079" duration="7810000" />
+      <workItem from="1700240557299" duration="51000" />
+      <workItem from="1700242199254" duration="485000" />
+      <workItem from="1700242993767" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="create model, controller and migration of subject, student and pivot table student_has_subject">
       <option name="closed" value="true" />
@@ -564,7 +563,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699981721760</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Criação de Options">
+      <option name="closed" value="true" />
+      <created>1700220350714</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1700220350714</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Cruds Options">
+      <option name="closed" value="true" />
+      <created>1700229258080</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1700229258080</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,7 +597,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mudança da nome da permissao de usuario para professor" />
     <MESSAGE value="CRUD de materias" />
     <MESSAGE value="permissao de usuario e ajustes em materias" />
     <MESSAGE value="students in subject" />
@@ -607,7 +621,8 @@
     <MESSAGE value="Ajuste auditoria, log tabela pivot" />
     <MESSAGE value="Criação de Questions" />
     <MESSAGE value="Criação de Options" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação de Options" />
+    <MESSAGE value="Cruds Options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cruds Options" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
