@@ -17,6 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->id();
             $table->string('question_text', 255)->nullable();
             $table->boolean('active')->default(0);
+            $table->integer('sorting')->default(0);
             $table->softDeletes();
             $table->timestamps();
         });

@@ -25,13 +25,13 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="row mb-3 justify-content-end">
-{{--                                    @can('curso.remover')--}}
-{{--                                        <div class="col-6 ps-2">--}}
-{{--                                            <button id="btSubmitDelete" data-route="{{route('admin.dashboard.question.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>--}}
-{{--                                        </div>--}}
-{{--                                    @endcan--}}
+                                    @can('questao.remover')
+                                        <div class="col-6 ps-2">
+                                            <button id="btSubmitDelete" data-route="{{route('admin.dashboard.question.destroySelected')}}" type="button" class="btn btn-danger" style="display: none;">Deletar selecionados</button>
+                                        </div>
+                                    @endcan
                                     <div class="row col-6 d-flex justify-content-end">
-                                        @can('curso.criar')
+                                        @can('questao.criar')
                                             <div style="width: 165px">
                                                 <a href="{{route('admin.dashboard.question.create')}}" class="btn btn-success float-end">Adicionar novo <i class="mdi mdi-plus"></i></a>
                                             </div>
@@ -51,12 +51,12 @@
                                         </tr>
                                     </thead>
 
-                                    <tbody>
+                                    <tbody data-route="{{route('admin.dashboard.question.sorting')}}">
                                         @foreach ($questions as $key => $question)
-                                            <tr>
+                                            <tr data-code="{{$question->id}}">
                                                 <td><span class="btnDrag mdi mdi-drag-horizontal font-22"></span></td>
                                                 <td class="bs-checkbox">
-{{--                                                    <label><input data-index="{{$key}}" name="btnSelectItem" class="btnSelectItem" type="checkbox" value="{{$question->id}}"></label>--}}
+                                                    <label><input data-index="{{$key}}" name="btnSelectItem" class="btnSelectItem" type="checkbox" value="{{$question->id}}"></label>
                                                 </td>
                                                 <td>{{substr(strip_tags($question->question_text), 0, 100)}}</td>
                                                 <td>
@@ -67,12 +67,12 @@
                                                 </td>
                                                 <td>
                                                     <div class="row justify-content-start">
-                                                        @can('curso.editar')
+                                                        @can('questao.editar')
                                                             <div class="col-2">
                                                                 <a href="{{route('admin.dashboard.question.edit',['question' => $question->id])}}" class="btn-icon mdi mdi-square-edit-outline"></a>
                                                             </div>
                                                         @endcan
-                                                        @can('curso.visualizar')
+                                                        @can('questao.visualizar')
                                                             <div class="col-2">
                                                                 <a class="btn-icon mdi mdi-eye" data-bs-toggle="modal" data-bs-target="#modal-question-{{$question->id}}"></a>
 
@@ -93,7 +93,7 @@
                                                                 </div>
                                                             </div>
                                                         @endcan
-                                                        @can('curso.remover')
+                                                        @can('questao.remover')
                                                             <form action="{{route('admin.dashboard.question.destroy',['question' => $question->id])}}" class="col-2" method="POST">
                                                                 @method('DELETE') @csrf
 

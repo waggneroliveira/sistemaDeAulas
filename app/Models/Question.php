@@ -13,12 +13,34 @@ class Question extends Model
 
     protected $fillable = [
         'question_text',
-        'options',
-        'correct_option',
         'active',
+        'sorting',
     ];
+    protected static $logAttributes = [
+        'question_text',
+        'active',
+        'sorting',
+    ];
+
+    protected static $logOnlyDirty = true;
+
+    public function customProperties()
+    {
+        $properties = [];
+
+        foreach (static::$logAttributes as $attribute) {
+            $properties['old'][$attribute] = $this->getOriginal($attribute);
+            $properties['new'][$attribute] = $this->getAttribute($attribute);
+        }
+
+        return $properties;
+    }
 
     public function options(){
         return $this->belongsTo(Option::class, 'id');
+    }
+
+    public function scopeSorting($query){
+        return $query->orderBy('sorting', 'ASC');
     }
 }

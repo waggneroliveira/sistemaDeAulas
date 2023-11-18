@@ -17,7 +17,26 @@ class Option extends Model
         'sorting',
         'question_id'
     ];
+    protected static $logAttributes = [
+        'response',
+        'correct_option',
+        'sorting',
+        'question_id'
+    ];
 
+    protected static $logOnlyDirty = true;
+
+    public function customProperties()
+    {
+        $properties = [];
+
+        foreach (static::$logAttributes as $attribute) {
+            $properties['old'][$attribute] = $this->getOriginal($attribute);
+            $properties['new'][$attribute] = $this->getAttribute($attribute);
+        }
+
+        return $properties;
+    }
     public function question(){
         return $this->hasMany(Question::class,'id');
     }

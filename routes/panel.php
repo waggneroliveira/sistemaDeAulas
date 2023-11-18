@@ -232,6 +232,10 @@ Route::prefix('painel/')->group(function () {
         Route::resource('avaliacao', QuestionController::class)
             ->names('admin.dashboard.question')
             ->parameters(['avaliacao' => 'question']);
+        Route::post('avaliacao/delete', [QuestionController::class, 'destroySelected'])
+            ->name('admin.dashboard.question.destroySelected');
+        Route::post('avaliacao/sorting', [QuestionController::class, 'sorting'])
+            ->name('admin.dashboard.question.sorting');
         //OPTIONS
         Route::resource('resposta', OptionController::class)
             ->names('admin.dashboard.option')

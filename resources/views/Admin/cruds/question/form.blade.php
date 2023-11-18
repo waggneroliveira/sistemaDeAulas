@@ -9,6 +9,10 @@
                     'data-height' => 200
                 ]) !!}
             </div>
+            <div class="mb-3">
+                {!! Form::checkbox('active', '1', null, ['class'=>'form-check-input', 'id'=>'active']) !!}
+                {!! Form::label('active', 'Ativo?', ['class'=>'form-check-label']) !!}
+            </div>
         </div> <!-- end card-body-->
     </div> <!-- end card-->
 </div>

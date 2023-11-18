@@ -30,7 +30,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="page-title-box">
-                            <h4 class="page-title">Opções</h4>
+                            <h4 class="page-title">Alternativas</h4>
                         </div>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                                     <div class="modal-dialog" style="max-width: 800px;">
                                         <div class="modal-content">
                                             <div class="modal-header p-3 pt-2 pb-2">
-                                                <h4 class="page-title">Opções</h4>
+                                                <h4 class="page-title">Alternativas</h4>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body p-3 pt-0 pb-3">
@@ -105,7 +105,7 @@
                                                         <div class="modal-dialog" style="max-width: 800px;">
                                                             <div class="modal-content">
                                                                 <div class="modal-header p-3 pt-2 pb-2">
-                                                                    <h4 class="page-title">Opções</h4>
+                                                                    <h4 class="page-title">Alternativas</h4>
                                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                 </div>
                                                                 <div class="modal-body p-3 pt-0 pb-3">
@@ -135,16 +135,4 @@
         </div> <!-- content -->
     </div>
     @include('Admin.components.links.resourcesCreateEdit')
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var element = document.querySelector("#resposta");
-            if (element) {
-                element.scrollIntoView();
-            }
-            // Redirecionar para o âncora #resposta
-            setTimeout(function() {
-                window.location.href = "{{ route('admin.dashboard.question.edit', ['question' => $question]) }}#resposta";
-            }, 500);
-        });
-    </script>
 @endsection

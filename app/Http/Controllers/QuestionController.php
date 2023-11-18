@@ -5,14 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\Option;
 use App\Models\Question;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
 
 class QuestionController extends Controller
 {
     public function index()
     {
-        $questions = Question::with('options')->paginate(15);
+        $questions = Question::with('options')
+            ->sorting()
+            ->paginate(15);
 
         return view('Admin.cruds.question.index', [
             'questions'=>$questions,
@@ -30,11 +34,11 @@ class QuestionController extends Controller
 
         try {
             DB::beginTransaction();
-                if (Question::create($data)){
+                if ($question = Question::create($data)){
                     Session::flash('success', 'Avaliação cadastrada com sucesso!');
                 }
             DB::commit();
-            return redirect()->route('admin.dashboard.question.index');
+            return redirect()->route('admin.dashboard.question.edit',['question'=>$question]);
         }catch (\Exception $exception){
             DB::rollBack();
             Session::flash('error', 'Erro ao cadastrar avaliação');
@@ -76,17 +80,34 @@ class QuestionController extends Controller
         return redirect()->back();
     }
 
-    public function checkAnswer(Request $request)
+    public function destroySelected(Request $request)
     {
-        $questionId = $request->input('question_id');
-        $selectedOption = $request->input('selected_option');
-
-        $question = Question::find($questionId);
-
-        if ($question->correct_option == $selectedOption) {
-            return response()->json(['correct' => true]);
-        } else {
-            return response()->json(['correct' => false]);
+        if (!Auth::user()->can(['resposta.visualizar', 'resposta.remover'])) {
+            return view('Admin.error.403');
         }
+
+        $deletedItems = Question::whereIn('id', $request->deleteAll)->get();
+
+        if ($deletedItems->count() > 0) {
+            Question::whereIn('id', $request->deleteAll)->delete();
+
+            foreach ($deletedItems as $deletedItem) {
+                activity()
+                    ->performedOn($deletedItem)
+                    ->causedBy(Auth::user())
+                    ->log('deleted');
+            }
+
+            return Response::json(['status' => 'success', 'message' => $deletedItems->count().' itens deletados com sucesso!']);
+        } else {
+            return Response::json(['status' => 'error', 'message' => 'Nenhum item selecionado para exclusão']);
+        }
+    }
+    public function sorting(Request $request)
+    {
+        foreach($request->arrId as $sorting => $id){
+            Question::where('id', $id)->update(['sorting' => $sorting]);
+        }
+        return Response::json(['status' => 'success']);
     }
 }
