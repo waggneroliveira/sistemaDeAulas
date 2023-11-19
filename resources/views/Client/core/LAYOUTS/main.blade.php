@@ -21,13 +21,6 @@
     <meta property="og:title" content="Sistema de Aulas - WHI" />
     <meta property="og:description" content="Descrição" />
     {{-- <meta property="og:image" content="{{ asset(mix('')) }}" /> --}}
-    <!-- METAS DO TWITTER COMPARTILHAR -->
-    <meta name="twitter:card" content="Sistema de Aulas - WHI" />
-    <meta name="twitter:site" content="{{ url('') }}" />
-    {{-- <meta name="twitter:image" content="{{ asset(mix('')) }}" /> --}}
-    <meta name="twitter:creator" content="WHI - WEB DE ALTA INSPIRAÇÃO" />
-    <meta name="twitter:title" content="Sistema de Aulas - WHI" />
-    <meta name="twitter:description" content="Descrição" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ asset(mix('Client/assets/css/app.css')) }}" />
@@ -35,9 +28,19 @@
 </head>
 
 <body>
-    <header>
-        dois items
-    </header>
+    {{-- TODO: (BACKEND) usar controle de session para definir se o usuário está logado; --}}
+    @php
+        $objHeader = [
+            'isLogged' => true,
+            'username' => 'Vânia',
+            'profilePic' => asset('Client/assets/images/user.png'),
+            'lnk-profile' => '#', // TODO: rota para pg de perfil
+            'lnk-sup' => '#', // TODO: rota para suporte
+            'lnk-logout' => '#', // TODO: rota para sair
+        ];
+    @endphp
+
+    @include('Client.models.HEADERS.mdl-header', $objHeader)
 
     <main id="page">
         @yield('content')

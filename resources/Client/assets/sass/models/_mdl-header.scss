@@ -1,0 +1,28 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.mdl-header {
+    @include dis-flex($align: center, $justify: space-between);
+    background-color: $color-three;
+    padding: 24px 2.5vw;
+
+    &__logo {
+        display: block;
+        height: auto;
+        width: 56px;
+        aspect-ratio: 50/59;
+
+        img {
+            @include objConfig($fit: contain);
+        }
+    }
+
+    &__profile-pic {
+        height: auto;
+        width: 56px;
+        aspect-ratio: 1/1;
+        @include objConfig($fit: cover);
+
+        border-radius: 50%;
+    }
+}

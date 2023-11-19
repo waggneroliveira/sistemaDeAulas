@@ -3,8 +3,11 @@
 @use "utilities/base";
 @use "utilities/typography";
 
+//components
+@use "components/dropdown";
+
 //main
 @use "main";
 
-//elementos
-@use "models/mdl-article";
+//models
+@use "models/mdl-header";

@@ -1,15 +1,15 @@
-@use "utilities/variables" as v;
-@use "utilities/mixins" as m;
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
 
 %theme {
-    &-ttl {
-        font-family: v.$clash-display;
-        font-size: 3rem;
-        font-weight: 700;
-        color: v.$color-one;
+    &-menu-lnk {
+        font-family: $montserrat;
+        font-weight: 500;
+        font-size: 1rem;
 
-        span {
-            color: v.$color-one;
-        }
+        color: $color-six;
+    }
+
+    &-ttl {
     }
 }

@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap");
 abbr,
 address,
 article,
@@ -237,26 +236,87 @@ strong {
   z-index: 20;
 }
 
-.mdl-article__title, h1 {
-  font-family: "Clash Display", sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #1fad90;
+.dropdown__header, .dropdown__list__item {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #eae6e6;
 }
-.mdl-article__title span, h1 span {
-  color: #1fad90;
+.dropdown {
+  position: relative;
+}
+.dropdown__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.dropdown__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  display: none;
+  position: absolute;
+  background-color: #eae6e6;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  list-style: none;
+  padding: 16px 0px;
+  border-radius: 12px;
+}
+:hover > .dropdown__list {
+  display: flex;
+  opacity: 1;
+}
+.dropdown__list__item {
+  color: #232323;
+  padding: 4px 8px;
+  transition: background-color ease 0.3s;
+}
+.dropdown__list__item:hover {
+  background-color: #2e2e2e;
 }
 
 h1 {
   text-align: right;
 }
 
-.mdl-article {
+.mdl-header {
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #232323;
+  padding: 24px 2.5vw;
 }
-.mdl-article:nth-of-type(even) {
-  flex-direction: row-reverse;
+.mdl-header__logo {
+  display: block;
+  height: auto;
+  width: 56px;
+  aspect-ratio: 50/59;
+}
+.mdl-header__logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.mdl-header__profile-pic {
+  height: auto;
+  width: 56px;
+  aspect-ratio: 1/1;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
 }/*# sourceMappingURL=app.css.map */
