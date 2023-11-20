@@ -1,5 +1,17 @@
 @extends('Client.core.main')
 @section('content')
+    <div>
+        <form action="" method="POST">
+            @csrf
+                {!! $question->question_text !!}
+            <input type="hidden" name="question" value="{!! $question->question_text !!}">
+            @foreach($question->options as $option)
+                <input type="checkbox" name="option" id="{{$option->id}}">
+                <label for="{{$option->id}}">{{$option->response}}</label>
+            @endforeach
+
+        </form>
+    </div>
     <h1>teste whi</h1>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/nobGM3EKLIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <div style="padding:56.25% 0 0 0;position:relative;">

@@ -48,11 +48,13 @@ class QuestionController extends Controller
 
     public function edit(Question $question)
     {
-        $options = Option::with('question')->sorting()->get();
-
+        $question = Question::with('options')
+            ->where('id', $question->id)
+            ->sorting()
+            ->first();
+//        dd($question);
         return view('Admin.cruds.question.edit', [
             'question'=>$question,
-            'options'=>$options,
         ]);
     }
 

@@ -239,7 +239,7 @@ Route::prefix('painel/')->group(function () {
         //OPTIONS
         Route::resource('resposta', OptionController::class)
             ->names('admin.dashboard.option')
-            ->parameters(['resposta' => 'options']);
+            ->parameters(['resposta' => 'option']);
         Route::post('resposta/delete', [OptionController::class, 'destroySelected'])
             ->name('admin.dashboard.option.destroySelected');
         Route::post('resposta/sorting', [OptionController::class, 'sorting'])

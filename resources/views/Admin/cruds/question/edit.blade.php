@@ -56,7 +56,7 @@
                                                 {!! Form::model(null, ['route' => 'admin.dashboard.option.store', 'class'=>'parsley-examples', 'options' => true]) !!}
                                                 @include('Admin.cruds.option.form')
                                                 {!! Form::button('Cadastrar', ['class'=>'btn btn-primary waves-effect waves-light float-end me-3 width-lg', 'type' => 'submit']) !!}
-{{--                                                <a href="{{route('admin.dashboard.option.edit', ['options' => $option->id])}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Cancelar</a>--}}
+                                                <a href="{{route('admin.dashboard.question.edit', ['question' => $question->id])}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Cancelar</a>
                                                 {!! Form::close() !!}
                                             </div>
                                         </div>
@@ -81,8 +81,8 @@
                         </tr>
                         </thead>
 
-                        <tbody id="resposta" data-route="{{route('admin.dashboard.option.sorting')}}">
-                            @foreach ($options as $key => $option)
+                        <tbody data-route="{{route('admin.dashboard.option.sorting')}}">
+                            @foreach ($question->options as $key => $option)
                                 <tr data-code="{{$option->id}}">
                                     <td><span class="btnDrag mdi mdi-drag-horizontal font-22"></span></td>
                                     <td class="bs-checkbox">
@@ -109,8 +109,10 @@
                                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                 </div>
                                                                 <div class="modal-body p-3 pt-0 pb-3">
-                                                                    {!! Form::model($option, ['route' => ['admin.dashboard.option.show', $option->id], 'class'=>'parsley-examples']) !!}
-                                                                    @include('Admin.cruds.option.form')
+                                                                    {!! Form::model($option, ['route' => ['admin.dashboard.option.update', $option->id], 'class'=>'parsley-examples', 'method' => 'PUT']) !!}
+                                                                        @include('Admin.cruds.option.form')
+                                                                        {!! Form::button('Salvar', ['class'=>'btn btn-primary waves-effect waves-light float-end me-3 width-lg', 'type' => 'submit']) !!}
+                                                                        <a href="{{route('admin.dashboard.question.edit', ['question' => $question->id])}}" class="btn btn-secondary waves-effect waves-light float-end me-3 width-lg">Cancelar</a>
                                                                     {!! Form::close() !!}
                                                                 </div>
                                                             </div>
@@ -119,7 +121,7 @@
                                                 </div>
                                             @endcan
                                             @can(['resposta.remover', 'resposta.visualizar'])
-                                                <form action="{{route('admin.dashboard.option.destroy',['options' => $option->id])}}" class="col-4" method="POST">
+                                                <form action="{{route('admin.dashboard.option.destroy',['option' => $option->id])}}" class="col-4" method="POST">
                                                     @method('DELETE') @csrf
                                                     <button type="button" class="btn-icon btSubmitDeleteItem"><i class="mdi mdi-trash-can"></i></button>
                                                 </form>

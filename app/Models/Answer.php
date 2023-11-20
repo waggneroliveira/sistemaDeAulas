@@ -7,19 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Activitylog\Traits\LogsActivity;
 
-class Question extends Model
+class Answer extends Model
 {
     use HasFactory, SoftDeletes, LogsActivity;
 
     protected $fillable = [
-        'question_text',
-        'active',
-        'sorting',
+        'question',
+        'option',
     ];
     protected static $logAttributes = [
-        'question_text',
-        'active',
-        'sorting',
+        'question',
+        'option',
     ];
 
     protected static $logOnlyDirty = true;
@@ -34,13 +32,5 @@ class Question extends Model
         }
 
         return $properties;
-    }
-
-    public function options(){
-        return $this->hasMany(Option::class, 'question_id');
-    }
-
-    public function scopeSorting($query){
-        return $query->orderBy('sorting', 'ASC');
     }
 }
