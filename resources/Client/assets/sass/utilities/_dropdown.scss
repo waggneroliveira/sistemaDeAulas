@@ -9,6 +9,21 @@
         @extend %theme-menu-lnk;
         @include dis-flex($align: center, $justify: space-between);
         gap: 40px;
+        padding-left: 20px;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-color: $color-six;
+            -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0%);
+            clip-path: polygon(0 0, 50% 100%, 100% 0%);
+            height: 0.75rem;
+            width: 0.75rem;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 
     &__list {
@@ -36,12 +51,15 @@
         &__item {
             @extend %theme-menu-lnk;
             color: $color-three;
+            text-align: center;
 
             padding: 4px 8px;
+            width: 100%;
 
             transition: background-color ease 0.3s;
 
             &:hover {
+                color: $color-six;
                 background-color: $color-four;
             }
         }

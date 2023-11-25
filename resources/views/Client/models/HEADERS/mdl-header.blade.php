@@ -7,7 +7,7 @@
     @if ($isLogged)
         <div class="dropdown">
             <div class="dropdown__header" role="button">
-                <span>Olá, Vania</span>
+                <span>Olá,<br>Vania</span>
 
                 <img src="{{ $profilePic }}" alt="Foto de [user]" class="mdl-header__profile-pic">
             </div>
