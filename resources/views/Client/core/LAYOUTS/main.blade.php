@@ -31,7 +31,7 @@
     {{-- TODO: (BACKEND) usar controle de session para definir se o usuário está logado; --}}
     @php
         $objHeader = [
-            'isLogged' => true,
+            'isLogged' => false,
             'username' => 'Vânia',
             'profilePic' => asset('Client/assets/images/user.png'),
             'lnk-profile' => '#', // TODO: rota para pg de perfil
@@ -45,6 +45,8 @@
     <main id="page">
         @yield('content')
     </main>
+
+    @include('Client.models.FOOTERS.mdl-footer');
 
     {{-- <script src="{{ asset(mix('Client/assets/js/main.js')) }}"></script> --}}
 </body>

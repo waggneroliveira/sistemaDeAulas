@@ -1,0 +1,50 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../theme";
+
+.mdl-footer {
+    @include dis-flex($align: center, $justify: space-between);
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: $color-three;
+    padding: 32px 2.5vw;
+
+    @include small-device-down {
+        flex-direction: column;
+        padding: 44px 2.5vw 32px 2.5vw;
+    }
+
+    &__left {
+        @include dis-flex($align: center);
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    &__menu {
+        @include dis-flex($direction: column);
+        list-style: none;
+        gap: 0.5rem;
+
+        &__title {
+            @extend %theme-menu-lnk;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        &__item {
+            @extend %theme-menu-lnk;
+            font-weight: 600;
+        }
+    }
+
+    &__logo {
+        display: block;
+        width: 98px;
+        height: auto;
+        aspect-ratio: 98/90;
+
+        img {
+            @include objConfig($fit: contain);
+        }
+    }
+}

@@ -236,7 +236,7 @@ strong {
   z-index: 20;
 }
 
-.dropdown__header, .dropdown__list__item {
+.mdl-footer__menu__title, .mdl-footer__menu__item, .dropdown__header, .dropdown__list__item {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -336,4 +336,58 @@ h1 {
   width: 56px;
   aspect-ratio: 1/1;
   border-radius: 50%;
+}
+
+.mdl-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #232323;
+  padding: 32px 2.5vw;
+}
+@media (max-width: 576px) {
+  .mdl-footer {
+    flex-direction: column;
+    padding: 44px 2.5vw 32px 2.5vw;
+  }
+}
+.mdl-footer__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.mdl-footer__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  list-style: none;
+  gap: 0.5rem;
+}
+.mdl-footer__menu__title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.mdl-footer__menu__item {
+  font-weight: 600;
+}
+.mdl-footer__logo {
+  display: block;
+  width: 98px;
+  height: auto;
+  aspect-ratio: 98/90;
+}
+.mdl-footer__logo img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=app.css.map */

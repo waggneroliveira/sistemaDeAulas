@@ -18,7 +18,7 @@
     }
 
     &__profile-pic {
-        @include objConfig($fit: cover);
+        @include objConfig();
         height: auto;
         width: 56px;
         aspect-ratio: 1/1;
