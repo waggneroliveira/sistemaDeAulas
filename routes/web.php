@@ -11,6 +11,11 @@ require __DIR__ . '/panel.php';
 Route::get('/', function () {
     return view('Client.pages.home');
 })->name('home');
+
+Route::get('/bemvindo', function () {
+    return view('Client.pages.welcome');
+})->name('welcome');
+
 Route::get('/contato', function () {
     return view('emails.contato');
 });

@@ -237,10 +237,20 @@ strong {
 }
 
 .mdl-footer__menu__title, .mdl-footer__menu__item, .dropdown__header, .dropdown__list__item {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
+  font: 500 1rem "Montserrat", sans-serif;
   color: #eae6e6;
+}
+.cmp-anc-one {
+  font: 600 0.875rem "Montserrat", sans-serif;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px 1rem;
+  width: 134px;
+  margin-inline: 20px;
+  display: block;
+  border: solid 1px #524a4a;
+  background-color: #524a4a;
+  transition: background-color 0.3s ease;
 }
 .dropdown {
   position: relative;

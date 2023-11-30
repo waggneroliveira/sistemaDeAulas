@@ -2,21 +2,47 @@
 @use "utilities/mixins" as *;
 
 %theme {
-    &-menu-lnk {
-        font-family: $montserrat;
-        font-weight: 500;
-        font-size: 1rem;
+    &__menu-lnk {
+        font: 500 1rem $montserrat;
 
         color: $color-six;
     }
 
-    &-ttl {
+    &__ttl {
     }
 
-    &-btn {
+    &__btn {
         &-one {
+            font: 600 0.875rem $montserrat;
+            text-align: center;
+            color: $color-white;
+            padding: 10px 1rem;
+            width: 134px;
+
+            margin-inline: 20px;
+
+            display: block;
+            border: solid 1px $color-five;
+            background-color: $color-five;
+            transition: background-color 0.3s ease;
         }
+
         &-two {
+        }
+
+        &-four {
+            font: 400 0.875rem $montserrat;
+            text-align: center;
+            color: $color-black;
+            padding: 10px 32px 10px 12px;
+            width: 145px;
+
+            margin-inline: 20px;
+
+            display: block;
+            border: solid 1px $color-five;
+            background-color: $color-five;
+            transition: background-color 0.3s ease;
         }
     }
 }

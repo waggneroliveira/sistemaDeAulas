@@ -26,13 +26,13 @@
         gap: 0.5rem;
 
         &__title {
-            @extend %theme-menu-lnk;
+            @extend %theme__menu-lnk;
             font-weight: 600;
             margin-bottom: 1rem;
         }
 
         &__item {
-            @extend %theme-menu-lnk;
+            @extend %theme__menu-lnk;
             font-weight: 600;
         }
     }

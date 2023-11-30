@@ -3,6 +3,6 @@
 @use "theme";
 
 h1 {
-    @extend %theme-ttl;
+    @extend %theme__ttl;
     text-align: right;
 }
