@@ -240,7 +240,7 @@ strong {
   font: 500 1rem "Montserrat", sans-serif;
   color: #eae6e6;
 }
-.wellcome-page__title {
+.wellcome-page__title, .signup__title {
   font: 600 1.5rem "Montserrat", sans-serif;
   color: #ffffff;
   text-align: left;
@@ -348,6 +348,9 @@ strong {
   right: -40px;
 }
 
+.signup {
+  background-color: #524a4a;
+}
 .mdl-header {
   display: flex;
   flex-direction: row;

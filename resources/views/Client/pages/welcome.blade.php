@@ -7,7 +7,7 @@
 
             @include('Client.components.anchors.cmp-anc-four', [
                 'text' => 'Avance Aqui',
-                'url' => route('home'),
+                'url' => route('signup'),
                 'target' => '_self',
             ])
         </div>

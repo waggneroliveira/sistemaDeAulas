@@ -16,6 +16,10 @@ Route::get('/bemvindo', function () {
     return view('Client.pages.welcome');
 })->name('welcome');
 
+Route::get('/signup', function () {
+    return view('Client.pages.singup');
+})->name('signup');
+
 Route::get('/contato', function () {
     return view('emails.contato');
 });

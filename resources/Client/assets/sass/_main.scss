@@ -25,3 +25,11 @@
         right: -40px;
     }
 }
+
+.signup {
+    background-color: $color-five;
+
+    &__title {
+        @extend %theme__ttl;
+    }
+}
