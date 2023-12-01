@@ -1,1 +1,1 @@
-<a class="cmp-anc-one" href="{{ $url }}" target="{{ $target }}">{{ $text }}</a>
+<a class="cmp-anc-four" href="{{ $url }}" target="{{ $target }}">{{ $text }}</a>

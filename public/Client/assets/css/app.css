@@ -240,18 +240,36 @@ strong {
   font: 500 1rem "Montserrat", sans-serif;
   color: #eae6e6;
 }
-.cmp-anc-one {
-  font: 600 0.875rem "Montserrat", sans-serif;
-  text-align: center;
+.wellcome-page__title {
+  font: 600 1.5rem "Montserrat", sans-serif;
   color: #ffffff;
-  padding: 10px 1rem;
-  width: 134px;
-  margin-inline: 20px;
-  display: block;
-  border: solid 1px #524a4a;
-  background-color: #524a4a;
-  transition: background-color 0.3s ease;
+  text-align: left;
 }
+.cmp-anc-four {
+  font: 400 0.875rem "Montserrat", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  color: #171717;
+  background-color: #1fad90;
+  border-radius: 10px 0 10px 10px;
+  padding: 10px 32px 10px 12px;
+  width: 145px;
+  display: block;
+  position: relative;
+}
+.cmp-anc-four::after {
+  content: "";
+  background-color: #ffffff;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .dropdown {
   position: relative;
 }
@@ -309,8 +327,25 @@ strong {
   background-color: #2e2e2e;
 }
 
-h1 {
-  text-align: right;
+.wellcome-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  height: calc(100vh - 117px);
+  padding: 108px 110px;
+}
+.wellcome-page__call {
+  background-color: #524a4a;
+  border-radius: 20px 0 20px 20px;
+  padding: 24px 112px 24px 52px;
+  position: relative;
+  max-width: 616px;
+}
+.wellcome-page .cmp-anc-four {
+  position: absolute;
+  bottom: 0;
+  right: -40px;
 }
 
 .mdl-header {
