@@ -14,13 +14,13 @@
         </main>
 
 
-        <div class="signup__slider splide">
+        <aside class="signup__slider splide">
             <div class="splide__track">
                 <div class="splide__list">
                     <div class="splide__slide signup__slider__item"></div>
                 </div>
             </div>
-        </div>
+        </aside>
 
     </section>
 @endsection
