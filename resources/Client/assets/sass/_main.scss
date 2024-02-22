@@ -2,7 +2,9 @@
 @use "utilities/mixins" as *;
 @use "theme";
 
-.wellcome-page {
+// TODO: REMOVER ESSES ELEMENTOS DE PAGE E COLOCALOS EM ARQUIVOS INDEPENTES POR PAGE "/sass/pages/_page.scss"
+
+.welcome-page {
     @include dis-flex($align: start);
     height: calc(100vh - 117px);
     padding: 108px 110px;

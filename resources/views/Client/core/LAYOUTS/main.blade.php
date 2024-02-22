@@ -23,7 +23,7 @@
     {{-- <meta property="og:image" content="{{ asset(mix('')) }}" /> --}}
 
     <!-- CSS -->
-    <link rel="stylesheet" href="{{ asset(mix('Client/assets/css/app.css')) }}" />
+    <link rel="stylesheet" href="{{ asset(mix('Client/assets/css/app.min.css')) }}" />
 
 </head>
 
@@ -52,4 +52,3 @@
 </body>
 
 </html>
-<!-- END -->

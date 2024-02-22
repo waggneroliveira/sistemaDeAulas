@@ -293,8 +293,8 @@ mix.scripts(
     //     "public/Client/assets/css/responsive.css"
     // )
     .styles(
-        "resources/Client/assets/sass/app.css",
-        "public/Client/assets/css/app.css"
+        "resources/Client/assets/sass/app.min.css",
+        "public/Client/assets/css/app.min.css"
     )
     .scripts(
         "resources/Client/assets/js/splide.min.js",

@@ -1,9 +1,9 @@
 @extends('Client.core.LAYOUTS.main')
 @section('content')
-    <section class="wellcome-page" style="background-image: url({{ asset('Client/assets/images/wellcome-bg.png') }})">
+    <section class="welcome-page" style="background-image: url({{ asset('Client/assets/images/welcome-bg.png') }})">
 
-        <div class="wellcome-page__call">
-            <h1 class="wellcome-page__title">BEM VINDO AO FUTURO PEQUENA ESTRELA</h1>
+        <div class="welcome-page__call">
+            <h1 class="welcome-page__title">BEM VINDO AO FUTURO PEQUENA ESTRELA</h1>
 
             @include('Client.components.anchors.cmp-anc-four', [
                 'text' => 'Avance Aqui',
