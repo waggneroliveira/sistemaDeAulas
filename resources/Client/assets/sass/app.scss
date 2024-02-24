@@ -12,7 +12,11 @@
 @use "components/cmp-anc-four";
 
 //main
-@use "main";
+// @use "main";
+
+//pages
+@use "pages/pge-welcome";
+@use "pages/pge-singup";
 
 //models
 @use "models/mdl-header";

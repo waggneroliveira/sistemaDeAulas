@@ -1,0 +1,27 @@
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
+@use "theme";
+
+.welcome-page {
+    @include dis-flex($align: start);
+    height: calc(100vh - 117px);
+    padding: 108px 110px;
+
+    &__call {
+        background-color: $color-five;
+        border-radius: 20px 0 20px 20px;
+        padding: 24px 112px 24px 52px;
+        position: relative;
+        max-width: 616px;
+    }
+
+    &__title {
+        @extend %theme__ttl;
+    }
+
+    .cmp-anc-four {
+        position: absolute;
+        bottom: 0;
+        right: -40px;
+    }
+}

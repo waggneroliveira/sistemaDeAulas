@@ -1,0 +1,11 @@
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
+@use "theme";
+
+.signup {
+    background-color: $color-five;
+
+    &__title {
+        @extend %theme__ttl;
+    }
+}
