@@ -4,19 +4,18 @@
 @use "utilities/typography";
 
 //elementos gerais
-// TODO: REVER ARQUITETURA DE USO DE PLUGINGS (SE VAI SER COLOCADO NO _main.scss)
 @use "utilities/dropdown";
 
 //components
-// @use "components/cmp-anc-one";
-@use "components/cmp-anc-four";
+// @use "components/cmp-anc-01";
+@use "components/cmp-anc-04";
 
 //main
 // @use "main";
 
 //pages
 @use "pages/pge-welcome";
-@use "pages/pge-singup";
+@use "pages/pge-singup-institutional";
 
 //models
 @use "models/mdl-header";

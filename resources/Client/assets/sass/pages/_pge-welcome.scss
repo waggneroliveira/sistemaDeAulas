@@ -1,27 +1,28 @@
-@use "utilities/variables" as *;
-@use "utilities/mixins" as *;
-@use "theme";
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../theme";
 
-.welcome-page {
+.pge-welcome-page {
     @include dis-flex($align: start);
-    height: calc(100vh - 117px);
-    padding: 108px 110px;
+    @include bg;
+    height: calc(100vh - 7.25rem);
+    padding: 6.75rem;
 
     &__call {
         background-color: $color-five;
-        border-radius: 20px 0 20px 20px;
-        padding: 24px 112px 24px 52px;
+        border-radius: 1.25rem 0 1.25rem 1.25rem;
+        padding: 1.5rem 7rem 1.5rem 3.25rem;
         position: relative;
         max-width: 616px;
-    }
 
-    &__title {
-        @extend %theme__ttl;
-    }
+        &__title {
+            @extend %theme__ttl;
+        }
 
-    .cmp-anc-four {
-        position: absolute;
-        bottom: 0;
-        right: -40px;
+        .cmp-anc-04 {
+            position: absolute;
+            bottom: 0;
+            right: -2.5rem;
+        }
     }
 }

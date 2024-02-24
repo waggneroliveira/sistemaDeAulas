@@ -7,44 +7,49 @@
     flex-wrap: wrap;
     gap: 2rem;
     background-color: $color-three;
-    padding: 32px 2.5vw;
+
+    @extend %theme__padding;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
     @include small-device-down {
         flex-direction: column;
-        padding: 44px 2.5vw 32px 2.5vw;
+        padding-top: 2.75rem;
     }
 
-    &__left {
+    &__nav {
         @include dis-flex($align: center);
         gap: 2rem;
         flex-wrap: wrap;
-    }
 
-    &__menu {
-        @include dis-flex($direction: column);
-        list-style: none;
-        gap: 0.5rem;
+        &__list {
+            @include dis-flex($direction: column);
+            list-style: none;
+            gap: 0.5rem;
 
-        &__title {
-            @extend %theme__menu-lnk;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
+            &__item {
+                @extend %theme__menu-lnk;
+                font-weight: 600;
 
-        &__item {
-            @extend %theme__menu-lnk;
-            font-weight: 600;
+                &--title {
+                    @extend .mdl-footer__nav__list__item;
+                    margin-bottom: 1rem;
+                }
+            }
         }
     }
 
     &__logo {
         display: block;
-        width: 98px;
+        width: 6rem;
         height: auto;
         aspect-ratio: 98/90;
 
         img {
-            @include objConfig($fit: contain);
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
         }
     }
 }

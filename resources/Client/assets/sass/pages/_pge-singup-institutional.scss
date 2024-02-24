@@ -1,6 +1,6 @@
-@use "utilities/variables" as *;
-@use "utilities/mixins" as *;
-@use "theme";
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../theme";
 
 .signup {
     background-color: $color-five;

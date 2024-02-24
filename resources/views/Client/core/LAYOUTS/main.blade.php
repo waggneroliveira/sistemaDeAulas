@@ -32,11 +32,11 @@
     @php
         $objHeader = [
             'isLogged' => false,
-            'username' => 'Vânia',
+            'userName' => 'Vânia',
             'profilePic' => asset('Client/assets/images/user.png'),
-            'lnk-profile' => '#', // TODO: rota para pg de perfil
-            'lnk-sup' => '#', // TODO: rota para suporte
-            'lnk-logout' => '#', // TODO: rota para sair
+            'lnkProfile' => '#', // TODO: rota para pg de perfil
+            'lnkSup' => '#', // TODO: rota para suporte
+            'lnkLogout' => '#', // TODO: rota para sair
         ];
     @endphp
 

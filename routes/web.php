@@ -9,15 +9,15 @@ require __DIR__ . '/panel.php';
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('Client.pages.home');
+    return view('Client.pages.pge-home');
 })->name('home');
 
-Route::get('/bemvindo', function () {
-    return view('Client.pages.welcome');
+Route::get('/bem-vindo', function () {
+    return view('Client.pages.pge-welcome');
 })->name('welcome');
 
 Route::get('/signup', function () {
-    return view('Client.pages.singup');
+    return view('Client.pages.pge-singup-institutional');
 })->name('signup');
 
 Route::get('/contato', function () {

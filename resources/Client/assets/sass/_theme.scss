@@ -2,9 +2,14 @@
 @use "utilities/mixins" as *;
 
 %theme {
+    &__padding {
+        padding-top: 0;
+        padding-right: 2.5rem;
+        padding-bottom: 0;
+        padding-left: 2.5rem;
+    }
     &__menu-lnk {
         font: 500 1rem $montserrat;
-
         color: $color-six;
     }
 
@@ -15,28 +20,28 @@
     }
 
     &__btn {
-        &-one {
+        &-01 {
             font: 600 0.875rem $montserrat;
             text-align: center;
             color: $color-white;
-            padding: 10px 1rem;
-            width: 134px;
+            padding: 0.75rem 1rem;
+            width: fit-content;
 
             display: block;
             background-color: $color-five;
         }
 
-        &-four {
+        &-04 {
             font: 400 0.875rem $montserrat;
             text-align: center;
             text-transform: uppercase;
             color: $color-black;
 
             background-color: $color-one;
-            border-radius: 10px 0 10px 10px;
+            border-radius: 0.5rem 0 0.5rem 0.5rem;
 
-            padding: 10px 32px 10px 12px;
-            width: 145px;
+            padding: 0.5rem 2rem 0.5rem 0.75rem;
+            width: fit-content;
             display: block;
             position: relative;
 
@@ -46,11 +51,11 @@
                 -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
                 clip-path: polygon(0 0, 0% 100%, 100% 50%);
 
-                height: 14px;
-                width: 14px;
+                height: 0.75rem;
+                width: 0.75rem;
 
                 position: absolute;
-                right: 12px;
+                right: 0.75rem;
                 top: 50%;
                 transform: translateY(-50%);
             }

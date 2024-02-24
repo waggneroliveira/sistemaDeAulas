@@ -13,7 +13,6 @@
             </form>
         </main>
 
-
         <aside class="signup__slider splide">
             <div class="splide__track">
                 <div class="splide__list">
