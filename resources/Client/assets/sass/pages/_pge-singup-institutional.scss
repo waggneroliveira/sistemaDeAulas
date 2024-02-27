@@ -2,10 +2,15 @@
 @use "../utilities/mixins" as *;
 @use "../theme";
 
-.signup {
-    background-color: $color-five;
+.pge-signup-inst {
+    background-color: $color-four;
 
-    &__title {
-        @extend %theme__ttl;
+    &__main {
+        padding-top: 5.25rem;
+        padding-left: 2.5vw;
+
+        &__title {
+            @extend %theme__ttl--af;
+        }
     }
 }

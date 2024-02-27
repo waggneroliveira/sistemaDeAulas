@@ -1,18 +1,30 @@
 @extends('Client.core.LAYOUTS.main')
 @section('content')
-    <section class="signup">
+    <section class="pge-signup-inst">
 
-        <main class="signup__main">
-            <ul class="signup__tabs">
-                <li class="signup__tabs__item"><button></button></li>
+        <main class="pge-signup-inst__main">
+
+            <h1 class="pge-signup-inst__main__title">
+                Inicie seu cadastro preenchendo os dados abaixo
+            </h1>
+
+            <ul class="pge-signup-inst__main__tabs">
+                <li class="pge-signup-inst__main__tabs__item">
+                    Dados Pessoais
+                </li>
+
+                <li class="pge-signup-inst__main__tabs__item">
+                    Dados Institucionais
+                </li>
             </ul>
 
-            <form action="" class="signup__form">
-                <div class="signup__form__panel"></div>
-                <div class="signup__form__text"></div>
+            <form action="" class="pge-signup-inst__form">
+                <div class="pge-signup-inst__form__panel"></div>
+                <div class="pge-signup-inst__form__text"></div>
             </form>
         </main>
 
+        {{-- ATTENTION:  --}}
         <aside class="signup__slider splide">
             <div class="splide__track">
                 <div class="splide__list">

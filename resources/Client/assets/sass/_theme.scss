@@ -8,6 +8,7 @@
         padding-bottom: 0;
         padding-left: 2.5rem;
     }
+
     &__menu-lnk {
         font: 500 1rem $montserrat;
         color: $color-six;
@@ -17,6 +18,20 @@
         font: 600 1.5rem $montserrat;
         color: $color-white;
         text-align: left;
+        position: relative;
+
+        &--af {
+            @extend %theme__ttl;
+
+            &::after {
+                display: block;
+                margin-top: 1.5rem;
+                content: "";
+                width: 4rem;
+                height: 0.25rem;
+                background-color: $color-two;
+            }
+        }
     }
 
     &__btn {
