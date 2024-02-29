@@ -7,8 +7,10 @@
 @use "utilities/dropdown";
 
 //components
-// @use "components/cmp-anc-01";
-@use "components/cmp-anc-04";
+@use "components/anchors/cmp-anc-04";
+@use "components/anchors/cmp-anc-05";
+
+@use "components/buttons/cmp-btn-05";
 
 //main
 // @use "main";
@@ -18,5 +20,5 @@
 @use "pages/pge-singup-institutional";
 
 //models
-@use "models/mdl-header";
-@use "models/mdl-footer";
+@use "models/HEADERS/mdl-header";
+@use "models/FOOTERS/mdl-footer";
