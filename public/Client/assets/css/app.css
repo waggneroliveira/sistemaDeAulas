@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap");
 abbr,
 address,
 article,
@@ -69,17 +68,17 @@ tr,
 ul,
 var,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: 0 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
 }
 
 body {
-  line-height: 1;
+    line-height: 1;
 }
 
 article,
@@ -93,175 +92,354 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
 
 nav ul {
-  list-style: none;
+    list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
 
 blockquote:after,
 blockquote:before,
 q:after,
 q:before {
-  content: "";
-  content: none;
+    content: "";
+    content: none;
 }
 
 a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: 0 0;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: 0 0;
 }
 
 ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
 }
 
 mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: 700;
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: 700;
 }
 
 del {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 abbr[title],
 dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
+    border-bottom: 1px dotted;
+    cursor: help;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
 }
 
 input,
 select {
-  vertical-align: middle;
+    vertical-align: middle;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 :target {
-  scroll-margin-top: 30px;
+    scroll-margin-top: 30px;
 }
 
 a,
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 input,
 select,
 textarea {
-  outline: 0;
+    outline: 0;
 }
 
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 li,
 p,
 ul {
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
 }
 
 b,
 strong {
-  font-family: inherit;
-  font-weight: 700;
+    font-family: inherit;
+    font-weight: 700;
 }
 
 .wrap {
-  width: 95%;
-  position: relative;
-  margin: 0 auto;
+    width: 95%;
+    position: relative;
+    margin: 0 auto;
 }
 
 .wrap-fluid {
-  width: 100%;
-  position: relative;
-  padding: 0 2.5vw;
+    width: 100%;
+    position: relative;
+    padding: 0 2.5vw;
 }
 
 .link-full {
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 20;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
 }
 
-.mdl-article__title {
-  font-family: "Clash Display", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #171717;
+.mdl-footer__menu__title,
+.mdl-footer__menu__item,
+.dropdown__header,
+.dropdown__list__item {
+    font: 500 1rem "Montserrat", sans-serif;
+    color: #eae6e6;
 }
-.mdl-article__title span {
-  color: #1fad90;
+.welcome-page__title,
+.signup__title {
+    font: 600 1.5rem "Montserrat", sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+.cmp-anc-four {
+    font: 400 0.875rem "Montserrat", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    color: #171717;
+    background-color: #1fad90;
+    border-radius: 10px 0 10px 10px;
+    padding: 10px 32px 10px 12px;
+    width: 145px;
+    display: block;
+    position: relative;
+}
+.cmp-anc-four::after {
+    content: "";
+    background-color: #ffffff;
+    -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-h1 {
-  text-align: right;
+.dropdown {
+    position: relative;
 }
-@media (max-width: 767.98px) {
-  h1 {
-    color: blue;
-  }
+.dropdown__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-left: 20px;
+    position: relative;
+}
+.dropdown__header::before {
+    content: "";
+    background-color: #eae6e6;
+    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0%);
+    height: 0.75rem;
+    width: 0.75rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.dropdown__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    display: none;
+    position: absolute;
+    background-color: #eae6e6;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    list-style: none;
+    padding: 16px 0px;
+    border-radius: 12px;
+}
+:hover > .dropdown__list {
+    display: flex;
+    opacity: 1;
+}
+.dropdown__list__item {
+    color: #232323;
+    text-align: center;
+    padding: 4px 8px;
+    width: 100%;
+    transition: background-color ease 0.3s;
+}
+.dropdown__list__item:hover {
+    color: #eae6e6;
+    background-color: #2e2e2e;
 }
 
-.mdl-article {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: stretch;
+.welcome-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    height: calc(100vh - 117px);
+    padding: 108px 110px;
 }
-.mdl-article:nth-of-type(even) {
-  flex-direction: row-reverse;
-}/*# sourceMappingURL=app.css.map */
+.welcome-page__call {
+    background-color: #524a4a;
+    border-radius: 20px 0 20px 20px;
+    padding: 24px 112px 24px 52px;
+    position: relative;
+    max-width: 616px;
+}
+.welcome-page .cmp-anc-four {
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+}
+
+.signup {
+    background-color: #524a4a;
+}
+.mdl-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #232323;
+    padding: 24px 2.5vw;
+}
+.mdl-header__logo {
+    display: block;
+    height: auto;
+    width: 56px;
+    aspect-ratio: 50/59;
+}
+.mdl-header__logo img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+}
+.mdl-header__profile-pic {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    height: auto;
+    width: 56px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.mdl-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: #232323;
+    padding: 32px 2.5vw;
+}
+@media (max-width: 576px) {
+    .mdl-footer {
+        flex-direction: column;
+        padding: 44px 2.5vw 32px 2.5vw;
+    }
+}
+.mdl-footer__left {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.mdl-footer__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+    list-style: none;
+    gap: 0.5rem;
+}
+.mdl-footer__menu__title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.mdl-footer__menu__item {
+    font-weight: 600;
+}
+.mdl-footer__logo {
+    display: block;
+    width: 98px;
+    height: auto;
+    aspect-ratio: 98/90;
+}
+.mdl-footer__logo img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+} /*# sourceMappingURL=app.css.map */

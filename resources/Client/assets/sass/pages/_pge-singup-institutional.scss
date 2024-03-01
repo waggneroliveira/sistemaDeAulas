@@ -1,0 +1,86 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../theme";
+
+.pge-signup-inst {
+    @include dis-flex(row, space-between);
+    background-color: $color-four;
+    padding-bottom: 6.5rem;
+
+    &:has(&__slider) &__main {
+        width: calc(70% - 1.25rem);
+        padding-right: 0;
+    }
+
+    &__main {
+        @extend %theme__padding;
+        padding-top: 5.25rem;
+        width: 100%;
+
+        &__title {
+            @extend %theme__ttl--af;
+            margin-bottom: 2.5rem;
+        }
+
+        &__tabs {
+            @include dis-flex(row, end, end);
+            gap: 0.25rem;
+            width: 100%;
+            height: auto;
+
+            &__item {
+                @include dis-flex(row, center, center);
+                width: fit-content;
+                padding: 1rem;
+                position: relative;
+
+                font: 600 1rem $montserrat;
+                color: $color-white;
+
+                background-color: $color-three;
+                border-radius: 0.5rem 0.5rem 0 0;
+
+                &.active {
+                    background-color: $color-five;
+                }
+
+                &::before {
+                    display: inline-block;
+
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    margin-right: 0.25rem;
+
+                    border-radius: 50%;
+                    background-color: $color-white;
+                    content: "";
+                }
+
+                &.done::before {
+                    background-color: transparent;
+                    content: url("../images/check-icon.svg");
+                }
+            }
+        }
+
+        &__form {
+            @include dis-flex(row, space-between);
+            flex-wrap: wrap;
+            background-color: $color-five;
+            padding: 2rem 3rem;
+            border-radius: 1.25rem 0 1.25rem 1.25rem;
+
+            .cmp-anc-05,
+            .cmp-btn-05 {
+                margin-bottom: 2.25rem;
+            }
+
+            &__text {
+                width: 100%;
+
+                font: 200 0.75rem $montserrat;
+                color: $color-white;
+            }
+        }
+    }
+}

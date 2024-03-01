@@ -9,8 +9,17 @@ require __DIR__ . '/panel.php';
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('Client.pages.home');
-});
+    return view('Client.pages.pge-home');
+})->name('home');
+
+Route::get('/bem-vindo', function () {
+    return view('Client.pages.pge-welcome');
+})->name('welcome');
+
+Route::get('/signup-inst', function () {
+    return view('Client.pages.pge-singup-institutional');
+})->name('signup-inst');
+
 Route::get('/contato', function () {
     return view('emails.contato');
 });

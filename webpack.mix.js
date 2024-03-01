@@ -262,52 +262,12 @@ mix.scripts(
         "public/Admin/assets/libs/cropper.min.css"
     )
 
-    //Portais
-
-    // .styles(
-    //     "resources/Client/assets/css/reset.css",
-    //     "public/Client/assets/css/reset.css"
-    // )
-    // .styles(
-    //     "resources/Client/assets/css/default.css",
-    //     "public/Client/assets/css/default.css"
-    // )
-    // .styles(
-    //     "resources/Client/assets/css/splide.min.css",
-    //     "public/Client/assets/css/splide.min.css"
-    // )
-    // .styles(
-    //     "resources/Client/assets/css/colapsinho.css",
-    //     "public/Client/assets/css/colapsinho.css"
-    // )
-    // .styles(
-    //     "resources/Client/assets/css/sandwich.menu.css",
-    //     "public/Client/assets/css/sandwich.menu.css"
-    // )
-    // .styles(
-    //     "resources/Client/assets/css/main.css",
-    //     "public/Client/assets/css/main.css"
-    // )
-    // .styles(
-    //     "resources/Client/assets/css/responsive.css",
-    //     "public/Client/assets/css/responsive.css"
-    // )
+    //Client
     .styles(
-        "resources/Client/assets/sass/app.css",
-        "public/Client/assets/css/app.css"
+        "resources/Client/assets/sass/app.min.css",
+        "public/Client/assets/css/app.min.css"
     )
-    .scripts(
-        "resources/Client/assets/js/splide.min.js",
-        "public/Client/assets/js/splide.min.js"
-    )
-    .scripts(
-        "resources/Client/assets/js/splide.min.js.map",
-        "public/Client/assets/js/splide.min.js.map"
-    )
-    .scripts(
-        "resources/Client/assets/js/splide-extension-grid.min.js",
-        "public/Client/assets/js/splide-extension-grid.min.js"
-    )
+
     .scripts(
         "resources/Client/assets/js/fslightbox.js",
         "public/Client/assets/js/fslightbox.js"
@@ -317,16 +277,8 @@ mix.scripts(
         "public/Client/assets/js/inputmask.min.js"
     )
     .scripts(
-        "resources/Client/assets/js/colapsinho.js",
-        "public/Client/assets/js/colapsinho.js"
-    )
-    .scripts(
         "resources/Client/assets/js/sandwich.menu.js",
         "public/Client/assets/js/sandwich.menu.js"
-    )
-    .scripts(
-        "resources/Client/assets/js/scroll-banner.js",
-        "public/Client/assets/js/scroll-banner.js"
     )
     .scripts(
         "resources/Client/assets/js/main.js",
@@ -334,7 +286,7 @@ mix.scripts(
     )
 
     //BROWSERSYNC
-    // .browserSync("http://127.0.0.1:8000")
+    .browserSync("http://127.0.0.1:8000")
 
     //CONFIG
     .autoload({

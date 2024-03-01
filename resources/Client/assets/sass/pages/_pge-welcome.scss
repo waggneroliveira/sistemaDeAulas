@@ -1,0 +1,28 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+@use "../theme";
+
+.pge-welcome-page {
+    @include dis-flex($align: start);
+    @include bg;
+    height: calc(100vh - 7.25rem);
+    padding: 6.75rem;
+
+    &__call {
+        background-color: $color-five;
+        border-radius: 1.25rem 0 1.25rem 1.25rem;
+        padding: 1.5rem 7rem 1.5rem 3.25rem;
+        position: relative;
+        max-width: 616px;
+
+        &__title {
+            @extend %theme__ttl;
+        }
+
+        .cmp-anc-04 {
+            position: absolute;
+            bottom: 0;
+            right: -2.5rem;
+        }
+    }
+}

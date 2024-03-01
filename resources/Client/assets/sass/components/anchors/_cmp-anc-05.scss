@@ -1,0 +1,8 @@
+// @use "../utilities/variables" as *;
+// @use "../utilities/mixins" as *;
+
+@use "../../theme";
+
+.cmp-anc-05 {
+    @extend %theme__btn-05;
+}

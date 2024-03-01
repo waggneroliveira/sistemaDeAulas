@@ -1,15 +1,101 @@
-@use "utilities/variables" as v;
-@use "utilities/mixins" as m;
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
 
 %theme {
-    &-ttl {
-        font-family: v.$clash-display;
-        font-size: 1.125rem;
-        font-weight: 700;
-        color: v.$color-black;
+    &__padding {
+        padding-top: 0;
+        padding-right: 2.5rem;
+        padding-bottom: 0;
+        padding-left: 2.5rem;
+    }
 
-        span {
-            color: v.$color-one;
+    &__menu-lnk {
+        font: 500 1rem $montserrat;
+        color: $color-six;
+    }
+
+    &__ttl {
+        font: 600 1.5rem $montserrat;
+        color: $color-white;
+        text-align: left;
+        position: relative;
+
+        &--af {
+            @extend %theme__ttl;
+
+            &::after {
+                display: block;
+                margin-top: 1.5rem;
+                content: "";
+                width: 4rem;
+                height: 0.25rem;
+                background-color: $color-two;
+            }
+        }
+    }
+
+    &__btn {
+        &-01 {
+            font: 600 0.875rem $montserrat;
+            text-align: center;
+            color: $color-white;
+            padding: 0.75rem 1rem;
+            width: fit-content;
+
+            display: block;
+            background-color: $color-five;
+        }
+
+        &-04 {
+            font: 400 0.875rem $montserrat;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-black;
+
+            background-color: $color-one;
+            border-radius: 0.5rem 0 0.5rem 0.5rem;
+
+            padding: 0.5rem 2rem 0.5rem 0.75rem;
+            width: fit-content;
+            display: block;
+            position: relative;
+
+            &::after {
+                content: "";
+                background-color: $color-white;
+                -webkit-clip-path: polygon(0 0, 0% 100%, 100% 50%);
+                clip-path: polygon(0 0, 0% 100%, 100% 50%);
+
+                height: 0.75rem;
+                width: 0.75rem;
+
+                position: absolute;
+                right: 0.75rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-05 {
+            @include dis-flex(row, center, center);
+            width: fit-content;
+            padding: 0.5rem 2.5rem;
+
+            outline: none;
+            border: solid 1px $color-three;
+            border-radius: 0.5rem;
+            background-color: $color-three;
+
+            font: 600 0.875rem $montserrat;
+            color: $color-white;
+
+            transition: background-color ease 0.3s, border-color ease 0.3s;
+
+            &:hover {
+                transition: background-color ease 0.3s, border-color ease 0.3s;
+                border-color: $color-black;
+                background-color: transparent;
+            }
         }
     }
 }

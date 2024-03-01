@@ -1,12 +1,3 @@
-@use "utilities/variables" as v;
-@use "utilities/mixins" as m;
+@use "utilities/variables" as *;
+@use "utilities/mixins" as *;
 @use "theme";
-
-h1 {
-    @extend %theme;
-    text-align: right;
-
-    @include m.medium-device-down {
-        color: blue;
-    }
-}

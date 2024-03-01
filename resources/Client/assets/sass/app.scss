@@ -3,8 +3,22 @@
 @use "utilities/base";
 @use "utilities/typography";
 
-//main
-@use "main";
+//elementos gerais
+@use "utilities/dropdown";
 
-//elementos
-@use "models/mdl-article";
+//components
+@use "components/anchors/cmp-anc-04";
+@use "components/anchors/cmp-anc-05";
+
+@use "components/buttons/cmp-btn-05";
+
+//main
+// @use "main";
+
+//pages
+@use "pages/pge-welcome";
+@use "pages/pge-singup-institutional";
+
+//models
+@use "models/HEADERS/mdl-header";
+@use "models/FOOTERS/mdl-footer";
