@@ -31,6 +31,16 @@
                     'type' => 'submit',
                 ])
 
+                <div class="pge-singup-inst__main__form__list">
+
+                    @include('Client.components.inputs.cmp-inp-text', [
+                        'placeholder' => 'input text',
+                        'name' => 'text',
+                    ])
+
+                </div>
+
+
                 <div class="pge-signup-inst__main__form__text">
                     <p>Preencha os campos ao lado certificando-se que não haverá erros de digitação. <br>Todas as
                         informações

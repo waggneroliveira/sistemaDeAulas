@@ -1,0 +1,12 @@
+@use "../../theme";
+
+.cmp-inp-text {
+    @extend %theme__input;
+
+    &__label {
+        @extend %theme__input__label;
+    }
+    &__input {
+        @extend %theme__input__input;
+    }
+}
