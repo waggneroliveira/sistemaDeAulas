@@ -272,10 +272,10 @@ mix.scripts(
         "resources/Client/assets/js/fslightbox.js",
         "public/Client/assets/js/fslightbox.js"
     )
-    .scripts(
-        "resources/Client/assets/js/inputmask.min.js",
-        "public/Client/assets/js/inputmask.min.js"
-    )
+    // .scripts(
+    //     "resources/Client/assets/js/inputmask.min.js",
+    //     "public/Client/assets/js/inputmask.min.js"
+    // )
     .scripts(
         "resources/Client/assets/js/sandwich.menu.js",
         "public/Client/assets/js/sandwich.menu.js"
