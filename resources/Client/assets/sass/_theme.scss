@@ -108,7 +108,7 @@
         border-radius: 1.25rem;
         padding: 0.5rem 1.5rem;
 
-        &:has(&__input:focus) &__label {
+        &:has(&__input:focus, .filled) &__label {
             top: 0;
             font-size: 0.5rem;
             transition: all 0.3s ease;

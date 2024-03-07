@@ -39,3 +39,19 @@ if (document.querySelector(".ano")) {
 }
 /* Mascaras usando inputmask.js */
 
+/* Controle de focus-out do input */
+const watchFocus = document.querySelectorAll('.watchFocus')
+
+if(watchFocus){
+    watchFocus.forEach(el =>{
+        el.addEventListener('focusout', (ev)=>{
+         if(ev.target.value.trim() !== ''){
+            ev.target.classList.add('filled')
+
+         } else {
+            ev.target.classList.remove('filled')
+         }
+        });
+    });
+}
+/* Controle de focus-out do input */

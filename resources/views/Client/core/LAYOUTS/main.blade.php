@@ -48,6 +48,7 @@
 
     @include('Client.models.FOOTERS.mdl-footer')
 
+    <script src="{{ asset(mix('Client/assets/js/inputmask.min.js')) }}"></script>
     <script src="{{ asset(mix('Client/assets/js/main.js')) }}"></script>
 </body>
 

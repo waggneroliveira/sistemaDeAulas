@@ -36,6 +36,9 @@
                     @include('Client.components.inputs.cmp-inp-text', [
                         'placeholder' => 'input text',
                         'name' => 'text',
+                        'maskClass' => 'cpf',
+                        'required' => false
+
                     ])
 
                 </div>
