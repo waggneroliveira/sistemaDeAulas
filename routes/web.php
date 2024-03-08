@@ -20,6 +20,10 @@ Route::get('/signup-inst', function () {
     return view('Client.pages.pge-singup-institutional');
 })->name('signup-inst');
 
+Route::get('/signup-pers', function () {
+    return view('Client.pages.pge-signup-personal');
+})->name('signup-pers');
+
 Route::get('/contato', function () {
     return view('emails.contato');
 });

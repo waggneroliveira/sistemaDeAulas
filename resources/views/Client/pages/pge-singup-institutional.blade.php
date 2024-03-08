@@ -20,7 +20,7 @@
             <form action="" class="pge-signup-inst__main__form">
 
                 @include('Client.components.anchors.cmp-anc-05', [
-                    'url' => '#',
+                    'url' => route('signup-pers'),
                     'target' => '_self',
                     'text' => 'Voltar',
                 ])

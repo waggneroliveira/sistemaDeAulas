@@ -46,30 +46,40 @@ if (document.querySelector(".ramal")) {
 /* Mascaras usando inputmask.js */
 
 /* Controle de focus-out do input */
-const watchFocus = document.querySelectorAll('.watchFocus')
+const watchFocus = document.querySelectorAll(".watchFocus");
 
-if(watchFocus){
-    watchFocus.forEach(el =>{
-        el.addEventListener('focusout', (ev)=>{
-         if(ev.target.value.trim() !== ''){
-            ev.target.classList.add('filled')
-
-         } else {
-            ev.target.classList.remove('filled')
-         }
+if (watchFocus) {
+    watchFocus.forEach((el) => {
+        el.addEventListener("focusout", (ev) => {
+            if (ev.target.value.trim() !== "") {
+                ev.target.classList.add("filled");
+            } else {
+                ev.target.classList.remove("filled");
+            }
         });
     });
 }
 /* Controle de focus-out do input */
 
-
 /* CARROSSEIS DO SISTEMA */
-new Swiper('.pge-signup-inst__main__slider__carousel', {
-    slidesPerView: 1,
+if (document.querySelector(".pge-signup-inst__main__slider__carousel")) {
+    new Swiper(".pge-signup-inst__main__slider__carousel", {
+        slidesPerView: 1,
 
-    pagination: {
-        el: '.pge-signup-inst__main__slider__carousel__swiper-pagination',
-        clickable: true,
-      },
-});
+        pagination: {
+            el: ".pge-signup-inst__main__slider__carousel__swiper-pagination",
+            clickable: true,
+        },
+    });
+}
 
+if (document.querySelector(".pge-signup-pers__main__slider__carousel")) {
+    new Swiper(".pge-signup-pers__main__slider__carousel", {
+        slidesPerView: 1,
+
+        pagination: {
+            el: ".pge-signup-pers__main__slider__carousel__swiper-pagination",
+            clickable: true,
+        },
+    });
+}
