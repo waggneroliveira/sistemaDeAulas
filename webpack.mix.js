@@ -267,6 +267,10 @@ mix.scripts(
         "resources/Client/assets/sass/app.min.css",
         "public/Client/assets/css/app.min.css"
     )
+    .styles(
+        "resources/Client/assets/css/swiper-bundle.min.css",
+        "public/Client/assets/css/swiper-bundle.min.css"
+    )
 
     .scripts(
         "resources/Client/assets/js/fslightbox.js",
@@ -275,6 +279,10 @@ mix.scripts(
     .scripts(
         "resources/Client/assets/js/inputmask.min.js",
         "public/Client/assets/js/inputmask.min.js"
+    )
+    .scripts(
+        "resources/Client/assets/js/swiper-bundle.min.js",
+        "public/Client/assets/js/swiper-bundle.min.js"
     )
     .scripts(
         "resources/Client/assets/js/sandwich.menu.js",

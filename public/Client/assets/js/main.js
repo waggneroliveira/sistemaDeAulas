@@ -37,6 +37,12 @@ if (document.querySelector(".ano")) {
         .querySelectorAll(".ano")
         .forEach((item) => Inputmask({ mask: "9999" }).mask(item));
 }
+
+if (document.querySelector(".ramal")) {
+    document
+        .querySelectorAll(".ramal")
+        .forEach((item) => Inputmask({ mask: "9999" }).mask(item));
+}
 /* Mascaras usando inputmask.js */
 
 /* Controle de focus-out do input */
@@ -55,3 +61,15 @@ if(watchFocus){
     });
 }
 /* Controle de focus-out do input */
+
+
+/* CARROSSEIS DO SISTEMA */
+new Swiper('.pge-signup-inst__main__slider__carousel', {
+    slidesPerView: 1,
+
+    pagination: {
+        el: '.pge-signup-inst__main__slider__carousel__swiper-pagination',
+        clickable: true,
+      },
+});
+

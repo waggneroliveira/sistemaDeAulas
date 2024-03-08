@@ -101,22 +101,27 @@
 
     &__input {
         width: 100%;
-        height: 2rem;
+        height: 2.5rem;
         position: relative;
+        @include dis-flex(row, start, end);
 
         background-color: $color-white;
         border-radius: 1.25rem;
         padding: 0.5rem 1.5rem;
 
+        &:has(&__input:focus, .filled) {
+            padding-bottom: 0;
+        }
+
         &:has(&__input:focus, .filled) &__label {
-            top: 0;
-            font-size: 0.5rem;
+            top: 0.5rem;
+            font-size: 0.75rem;
             transition: all 0.3s ease;
         }
 
         &__label {
             color: $color-black;
-            font: 200 0.75rem $montserrat;
+            font: 300 1rem $montserrat;
             position: absolute;
             left: 1.5rem;
             top: 50%;
@@ -126,12 +131,74 @@
         }
 
         &__input {
+            opacity: 0;
+            padding: 0;
             border: none;
             background-color: transparent;
-            font: 200 0.75rem $montserrat;
+            font: 300 1rem $montserrat;
 
             width: 100%;
-            height: 100%;
+            height: 1.5rem;
+
+            transition: all 0.3s ease;
+
+            &:focus,
+            &.filled {
+                opacity: 1;
+                transition: all 0.3s ease;
+            }
         }
+    }
+
+    &__pagination {
+        .swiper-pagination-bullets {
+            margin-top: 2rem;
+            text-align: left;
+            .swiper-pagination-bullet {
+                width: 20px;
+                height: 20px;
+
+                border-radius: 0;
+                background-color: rgba($color-two, 0.5);
+
+                &-active {
+                    background-color: $color-two;
+                }
+            }
+        }
+    }
+
+    &__nav {
+        // VARIÁVEIS QUE ALTERAM AS SETAS DE NAVEGAÇÃO
+        --swiper-navigation-size: 0.75rem; /* Variável que define o tamanho do botão e do after */
+        --swiper-navigation-color: $color-one; /* Variável que define a cor do after (setas) */
+
+        // O CSS DEVE SER RETIRADO QUANDO NÃO HOUVER UM CONTAINER PARAR SEGURAR OS BOTÕES DE NAVEGAÇÃO (&__nav)
+        position: relative;
+        width: 5rem; /* Tamanho do botão interno * 2 + GAP */
+        height: 2rem; /* Garante que o tamanho do botão esteja dentro do box. Caso o size seja alterado, deve-se alterar o tamanho do height */
+        margin: 3rem auto 0;
+        @include dis-flex(row, space-between, center);
+
+        // .swiper-button-next,
+        // .swiper-button-prev {
+        // O CSS DEVE SER RETIRADO QUANDO NÃO HOUVER UM BG NOS BOTÕES DE NAVEGAÇÃO
+        // position: relative;
+        // width: auto;
+        // aspect-ratio: 1/1;
+
+        // margin: unset;
+        // top: unset;
+        // right: unset;
+        // left: unset;
+
+        // border-radius: 50%;
+        // background-color: $color-one;
+
+        // &::after {
+        //     color: $color-five;
+        //     font-size: 0.75rem; /* tamanho da seta */
+        // }
+        // }
     }
 }

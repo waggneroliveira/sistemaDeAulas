@@ -3,7 +3,6 @@
     <section class="pge-signup-inst">
 
         <main class="pge-signup-inst__main">
-
             <h1 class="pge-signup-inst__main__title">
                 Inicie seu cadastro preenchendo os dados abaixo
             </h1>
@@ -31,14 +30,26 @@
                     'type' => 'submit',
                 ])
 
-                <div class="pge-singup-inst__main__form__list">
+                <div class="pge-signup-inst__main__form__list">
+                    {{-- NEXT: FRONTEND BACKEND
+                    A mascara para matricula vai ser o formato da matricula que o cliente possuir --}}
+                    @include('Client.components.inputs.cmp-inp-text', [
+                        'placeholder' => 'Matricula institucional',
+                        'name' => 'matricula',
+                        'required' => false,
+                    ])
 
                     @include('Client.components.inputs.cmp-inp-text', [
-                        'placeholder' => 'input text',
-                        'name' => 'text',
+                        'placeholder' => 'Matricula institucional',
+                        'name' => 'ramal',
+                        'maskClass' => 'ramal',
+                        'required' => false,
+                    ])
+                    @include('Client.components.inputs.cmp-inp-text', [
+                        'placeholder' => 'Matricula institucional',
+                        'name' => 'ramal',
                         'maskClass' => 'cpf',
-                        'required' => false
-
+                        'required' => false,
                     ])
 
                 </div>
@@ -58,13 +69,20 @@
             </form>
         </main>
 
-        {{-- ATTENTION:  --}}
-        <aside class="signup__slider">
-            <div class="splide__track">
-                <div class="splide__list">
-                    <div class="splide__slide signup__slider__item"></div>
+        <aside class="pge-signup-inst__main__slider">
+            <div class="pge-signup-inst__main__slider__carousel">
+                <div class="pge-signup-inst__main__slider__carousel__swiper-wrapper swiper-wrapper">
+                    @for ($i = 0; $i < 4; $i++)
+                        <figure class="pge-signup-inst__main__slider__item swiper-slide">
+                            <img src="{{ asset('Client/assets/images/cat-sqr.jpg') }}"
+                                class="pge-signup-inst__main__slider__item__img" alt="BACKEND - INSERIR legenda da imagem">
+                            <figcaption class="pge-signup-inst__main__slider__item__label">An elephant at sunset
+                            </figcaption>
+                        </figure>
+                    @endfor
                 </div>
             </div>
+            <div class="pge-signup-inst__main__slider__carousel__swiper-pagination"></div>
         </aside>
 
     </section>

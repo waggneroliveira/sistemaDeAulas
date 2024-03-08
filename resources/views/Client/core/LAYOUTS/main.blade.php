@@ -23,6 +23,7 @@
     {{-- <meta property="og:image" content="{{ asset(mix('')) }}" /> --}}
 
     <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset(mix('Client/assets/css/swiper-bundle.min.css')) }}" />
     <link rel="stylesheet" href="{{ asset(mix('Client/assets/css/app.min.css')) }}" />
 
 </head>
@@ -49,6 +50,7 @@
     @include('Client.models.FOOTERS.mdl-footer')
 
     <script src="{{ asset(mix('Client/assets/js/inputmask.min.js')) }}"></script>
+    <script src="{{ asset(mix('Client/assets/js/swiper-bundle.min.js')) }}"></script>
     <script src="{{ asset(mix('Client/assets/js/main.js')) }}"></script>
 </body>
 

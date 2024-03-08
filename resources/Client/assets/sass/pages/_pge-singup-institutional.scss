@@ -75,6 +75,13 @@
                 margin-bottom: 2.25rem;
             }
 
+            &__list {
+                @include dis-flex(column, start, start);
+                gap: 1.75rem;
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+
             &__text {
                 width: 100%;
 
@@ -83,7 +90,44 @@
             }
         }
 
-        // &__slider {
-        // }
+        &__slider {
+            width: 30%;
+            @extend %theme__pagination;
+
+            &__carousel {
+                overflow: hidden;
+
+                width: 100%;
+                height: 100%;
+            }
+
+            &__item {
+                position: relative;
+                inset: 0;
+
+                width: 100%;
+                height: 100%;
+
+                &__img {
+                    position: absolute;
+
+                    width: 100%;
+                    height: 100%;
+
+                    object-fit: cover;
+                    object-position: center;
+                }
+
+                &__label {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    padding: 0.25rem;
+                    background-color: $color-black;
+                    font: 600 0.5rem $montserrat;
+                    color: $color-white;
+                }
+            }
+        }
     }
 }
