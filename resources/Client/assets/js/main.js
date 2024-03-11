@@ -83,3 +83,28 @@ if (document.querySelector(".pge-signup-pers__main__slider__carousel")) {
         },
     });
 }
+
+const profileCard = document.querySelector('.cmp-crd-profile');
+if(profileCard){
+    const profileImage = profileCard.querySelector('.cmp-crd-profile__img');
+    const profileButton = profileCard.querySelector('.cmp-btn-01');
+    const profileInput = profileCard.querySelector('input[type=file]');
+
+
+    profileButton.addEventListener('click', ()=>{
+        profileInput.click();
+    });
+
+    profileInput.addEventListener('change', ()=>{
+        if(profileInput.files[0]){
+            console.log('tem file')
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(profileInput.files[0]);
+
+            fileReader.addEventListener('load', ()=>{
+                profileImage.setAttribute('src', fileReader.result);
+            });
+
+        }
+    })
+}

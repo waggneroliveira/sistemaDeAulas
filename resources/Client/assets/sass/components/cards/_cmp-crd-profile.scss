@@ -1,0 +1,40 @@
+@use "../../theme";
+@use "../../utilities/variables" as *;
+@use "../../utilities/mixins" as *;
+
+.cmp-crd-profile {
+    width: 25%;
+    padding: 0.5rem 1rem;
+    border-radius: 1.25rem;
+
+    @include dis-flex(column, start, center);
+
+    background-color: $color-four;
+
+    &__img {
+        width: 6.25rem;
+        height: auto;
+        aspect-ratio: 1/1;
+
+        object-fit: cover;
+        object-position: center;
+
+        margin-bottom: 1.75rem;
+
+        border-radius: 50%;
+    }
+    .cmp-btn-01 {
+        background-color: $color-one;
+        border-color: $color-one;
+
+        &:hover {
+            background-color: transparent;
+            transition: background-color .3s ease;
+        }
+    }
+    box-shadow: 0 .25rem .25rem 0 rgba(#000, .25);
+
+    input[type=file]{
+        visibility: hidden;
+    }
+}

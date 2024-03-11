@@ -39,11 +39,21 @@
             font: 600 0.875rem $montserrat;
             text-align: center;
             color: $color-white;
+            white-space: nowrap;
+
+            border: solid 1px $color-five;
+            border-radius: .75rem;
+
             padding: 0.75rem 1rem;
             width: fit-content;
 
             display: block;
             background-color: $color-five;
+            transition: background-color .3s ease;
+
+
+
+
         }
 
         &-04 {

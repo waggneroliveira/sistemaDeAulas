@@ -1,1 +1,5 @@
 @use "../../theme";
+
+.cmp-btn-01 {
+    @extend %theme__btn-01;
+}

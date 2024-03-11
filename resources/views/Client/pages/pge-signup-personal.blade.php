@@ -18,11 +18,13 @@
             </ul>
 
             <form action="" class="pge-signup-pers__main__form">
-
+                <div class="pge-signup-pers__main__form__buttons">
                 @include('Client.components.buttons.cmp-btn-05', [
                     'text' => 'Avançar',
                     'type' => 'submit',
                 ])
+
+                </div>
 
                 <div class="pge-signup-pers__main__form__list">
                     {{-- NEXT: FRONTEND BACKEND
@@ -47,8 +49,9 @@
                         'required' => false,
                     ])
 
-                </div>
+                    </div>
 
+                @include('Client.components.cards.cmp-crd-profile')
 
                 <div class="pge-signup-pers__main__form__text">
                     <p>Preencha os campos ao lado certificando-se que não haverá erros de digitação. <br>Todas as
@@ -61,6 +64,8 @@
                         página.
                     </p>
                 </div>
+
+
             </form>
         </main>
 
