@@ -8,10 +8,7 @@
         'text' => 'Alterar imagem'
     ])
     <input class="" type="file" name="profile-img">
-
-    {{-- @include('Client.components.inputs.cmp-inp-text', [
-                        'name' => 'profile-img',
-                        'required' => false,
-                        'disabled' => false
-                    ]) --}}
+    <span class="cmp-crd-profile__name"></span>
+    <span class="cmp-crd-profile__cpf">CPF: </span>
+    <span class="cmp-crd-profile__matricula">CPF: </span>
 </div>

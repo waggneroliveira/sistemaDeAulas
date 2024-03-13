@@ -29,12 +29,25 @@
 
         &:hover {
             background-color: transparent;
-            transition: background-color .3s ease;
+            transition: background-color 0.3s ease;
         }
     }
-    box-shadow: 0 .25rem .25rem 0 rgba(#000, .25);
+    box-shadow: 0 0.25rem 0.25rem 0 rgba(#000, 0.25);
 
-    input[type=file]{
+    input[type="file"] {
         visibility: hidden;
+    }
+
+    &__name{
+        text-align: center;
+        color: $color-white;
+    }
+    &__name,
+    &__cpf,
+    &__matricula {
+        display: none;
+        font: 600 1rem $montserrat;
+        text-transform: uppercase;
+        color: $color-white;
     }
 }

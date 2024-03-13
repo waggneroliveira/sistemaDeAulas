@@ -5,6 +5,11 @@ if (document.querySelector(".cpf")) {
         .querySelectorAll(".cpf")
         .forEach((item) => Inputmask({ mask: "999.999.999-99" }).mask(item));
 }
+if (document.querySelector(".rg")) {
+    document
+        .querySelectorAll(".rg")
+        .forEach((item) => Inputmask({ mask: "99.999.999-99" }).mask(item));
+}
 
 if (document.querySelector(".cnpj")) {
     document
@@ -84,20 +89,23 @@ if (document.querySelector(".pge-signup-pers__main__slider__carousel")) {
     });
 }
 
+/* PROFILE CARD */
 const profileCard = document.querySelector('.cmp-crd-profile');
 if(profileCard){
+    // variáveis para tratamento da imagem do card
     const profileImage = profileCard.querySelector('.cmp-crd-profile__img');
     const profileButton = profileCard.querySelector('.cmp-btn-01');
     const profileInput = profileCard.querySelector('input[type=file]');
 
 
+
+// TRATAMENTO DA IMAGEM DO CARD
     profileButton.addEventListener('click', ()=>{
         profileInput.click();
     });
 
     profileInput.addEventListener('change', ()=>{
         if(profileInput.files[0]){
-            console.log('tem file')
             const fileReader = new FileReader();
             fileReader.readAsDataURL(profileInput.files[0]);
 
@@ -107,4 +115,31 @@ if(profileCard){
 
         }
     })
+
+    // variáveis para tratamento dos elementos de texto do card
+    const nameInput = document.querySelector("input[name=name]");
+    const cpf = document.querySelector("input[name=cpf]");
+    const rg = document.querySelector("input[name=rg]");
+
+    if(nameInput){
+        const nameField = profileCard.querySelector(".cmp-crd-profile__name");
+
+        if(nameInput.value != ''){
+            if(nameField.style.display != 'block') {
+                nameField.style.display="block";
+            }
+
+            nameField.textContent = nameInput.value;
+        }
+
+        nameInput.addEventListener("input", (ev) => {
+
+            if(nameField.style.display != 'block') {
+                nameField.style.display="block";
+            }
+            nameField.textContent = ev.target.value;
+        })
 }
+}
+
+

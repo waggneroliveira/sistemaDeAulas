@@ -30,23 +30,30 @@
                     {{-- NEXT: FRONTEND BACKEND
                     A mascara para matricula vai ser o formato da matricula que o cliente possuir --}}
                     @include('Client.components.inputs.cmp-inp-text', [
-                        'placeholder' => 'Matricula institucional',
-                        'name' => 'matricula',
+                        'placeholder' => 'Nome',
+                        'name' => 'name',
                         'required' => false,
+                        'value'=> ''
+
                     ])
 
-                    @include('Client.components.inputs.cmp-inp-text', [
-                        'placeholder' => 'Matricula institucional',
-                        'name' => 'ramal',
-                        'maskClass' => 'ramal',
-                        'required' => false,
-                    ])
+
 
                     @include('Client.components.inputs.cmp-inp-text', [
-                        'placeholder' => 'Matricula institucional',
-                        'name' => 'ramal',
+                        'placeholder' => 'CPF',
+                        'name' => 'cpf',
                         'maskClass' => 'cpf',
                         'required' => false,
+                        'value'=> ''
+
+                    ])
+
+                    @include('Client.components.inputs.cmp-inp-text', [
+                        'placeholder' => 'RG',
+                        'name' => 'rg',
+                        'maskClass' => 'rg',
+                        'required' => false,
+                        'value'=> ''
                     ])
 
                     </div>
