@@ -9,6 +9,6 @@
     ])
     <input class="" type="file" name="profile-img">
     <span class="cmp-crd-profile__name"></span>
-    <span class="cmp-crd-profile__cpf">CPF: </span>
-    <span class="cmp-crd-profile__matricula">CPF: </span>
+    <span class="cmp-crd-profile__cpf"></span>
+    <span class="cmp-crd-profile__rg"></span>
 </div>

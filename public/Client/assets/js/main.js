@@ -118,8 +118,8 @@ if(profileCard){
 
     // variáveis para tratamento dos elementos de texto do card
     const nameInput = document.querySelector("input[name=name]");
-    const cpf = document.querySelector("input[name=cpf]");
-    const rg = document.querySelector("input[name=rg]");
+    const cpfInput = document.querySelector("input[name=cpf]");
+    const rgInput = document.querySelector("input[name=rg]");
 
     if(nameInput){
         const nameField = profileCard.querySelector(".cmp-crd-profile__name");
@@ -139,7 +139,47 @@ if(profileCard){
             }
             nameField.textContent = ev.target.value;
         })
-}
+    }
+    if(cpfInput){
+        const cpfField = profileCard.querySelector(".cmp-crd-profile__cpf");
+
+        if(cpfInput.value != ''){
+            if(cpfField.style.display != 'block') {
+                cpfField.style.display="block";
+            }
+
+            cpfField.textContent = `CPF: ${cpfInput.value}`;
+        }
+
+        cpfInput.addEventListener("input", (ev) => {
+
+            if(cpfField.style.display != 'block') {
+                cpfField.style.display="block";
+            }
+            cpfField.textContent = `CPF: ${ev.target.value}`;
+        })
+    }
+    if(rgInput){
+        const rgField = profileCard.querySelector(".cmp-crd-profile__rg");
+
+        if(rgInput.value != ''){
+            if(rgField.style.display != 'block') {
+                rgField.style.display="block";
+            }
+
+            rgField.textContent = `RG: ${rgInput.value}`;
+        }
+
+        rgInput.addEventListener("input", (ev) => {
+
+            if(rgField.style.display != 'block') {
+                rgField.style.display="block";
+            }
+            rgField.textContent = `RG: ${ev.target.value}`;
+        })
+    }
+
+
 }
 
 

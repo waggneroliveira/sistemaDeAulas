@@ -37,8 +37,6 @@
 
                     ])
 
-
-
                     @include('Client.components.inputs.cmp-inp-text', [
                         'placeholder' => 'CPF',
                         'name' => 'cpf',
