@@ -72,9 +72,13 @@
             border-radius: 1.25rem 0 1.25rem 1.25rem;
 
             &:has(.cmp-crd-profile) &__list{
-                width: calc(75% - 2rem);
-            }
+                width: calc(65% - 2rem);
 
+
+                @include large-device-down {
+                    width: 100%;
+                }
+            }
 
             &__buttons{
                 width: 100%;
@@ -103,6 +107,10 @@
         &__slider {
             width: 30%;
             @extend %theme__pagination;
+
+            @include large-device-down{
+                display: none;
+            }
 
             &__carousel {
                 overflow: hidden;

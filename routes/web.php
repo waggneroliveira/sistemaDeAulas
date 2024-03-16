@@ -24,6 +24,14 @@ Route::get('/signup-pers', function () {
     return view('Client.pages.pge-signup-personal');
 })->name('signup-pers');
 
+Route::get('/login', function () {
+    return view('Client.pages.pge-login');
+})->name('login');
+
+Route::get('/password', function () {
+    return view('Client.pages.pge-set-password');
+})->name('set-password');
+
 Route::get('/contato', function () {
     return view('emails.contato');
 });

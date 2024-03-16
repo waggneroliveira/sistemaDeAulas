@@ -12,8 +12,18 @@ html:focus-within {
 }
 
 body{
-    width: 100vdh;
+    width: 100dvw;
+    min-height: 100dvh;
     overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #2E2E2E;
+
+    & > main {
+        flex: 1 0 auto;
+    }
 }
 a,
 button {
