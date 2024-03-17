@@ -40,8 +40,13 @@
                 background-color: $color-three;
                 border-radius: 0.5rem 0.5rem 0 0;
 
+                @include small-device-down {
+                    display: none;
+                }
+
                 &.active {
                     background-color: $color-five;
+                    display: block;
                 }
 
                 &::before {
@@ -70,9 +75,17 @@
             padding: 2rem 3rem;
             border-radius: 1.25rem 0 1.25rem 1.25rem;
 
+            @include small-device-down {
+                gap: 0 0.5rem;
+            }
+
             .cmp-anc-05,
             .cmp-btn-05 {
                 margin-bottom: 2.25rem;
+
+                @include small-device-down{
+                    width: calc(50% - 0.25rem)
+                }
             }
 
             &__list {
@@ -93,6 +106,10 @@
         &__slider {
             width: 30%;
             @extend %theme__pagination;
+
+            @include x-large-device-down {
+                display: none;
+            }
 
             &__carousel {
                 overflow: hidden;

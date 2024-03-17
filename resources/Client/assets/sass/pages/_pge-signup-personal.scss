@@ -41,8 +41,13 @@
                 background-color: $color-three;
                 border-radius: 0.5rem 0.5rem 0 0;
 
+                @include small-device-down{
+                    display: none;
+                }
+
                 &.active {
                     background-color: $color-five;
+                    display: block;
                 }
 
                 &::before {
@@ -108,7 +113,7 @@
             width: 30%;
             @extend %theme__pagination;
 
-            @include large-device-down{
+            @include x-large-device-down{
                 display: none;
             }
 

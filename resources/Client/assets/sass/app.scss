@@ -24,6 +24,8 @@
 @use "pages/pge-welcome";
 @use "pages/pge-singup-institutional";
 @use "pages/pge-signup-personal";
+@use "pages/pge-login";
+@use "pages/pge-set-password";
 
 //models
 @use "models/HEADERS/mdl-header";

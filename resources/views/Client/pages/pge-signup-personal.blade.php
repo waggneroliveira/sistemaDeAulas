@@ -34,7 +34,6 @@
                         'name' => 'name',
                         'required' => false,
                         'value'=> ''
-
                     ])
 
                     @include('Client.components.inputs.cmp-inp-text', [
