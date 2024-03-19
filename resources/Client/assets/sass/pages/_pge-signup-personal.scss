@@ -12,7 +12,6 @@
         padding-right: 0;
     }
 
-
     &__main {
         @extend %theme__padding;
         padding-top: 5.25rem;
@@ -41,7 +40,7 @@
                 background-color: $color-three;
                 border-radius: 0.5rem 0.5rem 0 0;
 
-                @include small-device-down{
+                @include small-device-down {
                     display: none;
                 }
 
@@ -76,16 +75,15 @@
             padding: 2rem 3rem;
             border-radius: 1.25rem 0 1.25rem 1.25rem;
 
-            &:has(.cmp-crd-profile) &__list{
+            &:has(.cmp-crd-profile) &__list {
                 width: calc(65% - 2rem);
 
-
-                @include large-device-down {
+                @include medium-device-down {
                     width: 100%;
                 }
             }
 
-            &__buttons{
+            &__buttons {
                 width: 100%;
 
                 .cmp-btn-05 {
@@ -113,7 +111,7 @@
             width: 30%;
             @extend %theme__pagination;
 
-            @include x-large-device-down{
+            @include x-large-device-down {
                 display: none;
             }
 

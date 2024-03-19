@@ -19,10 +19,10 @@
 
             <form action="" class="pge-signup-pers__main__form">
                 <div class="pge-signup-pers__main__form__buttons">
-                @include('Client.components.buttons.cmp-btn-05', [
-                    'text' => 'Avançar',
-                    'type' => 'submit',
-                ])
+                    @include('Client.components.buttons.cmp-btn-05', [
+                        'text' => 'Avançar',
+                        'type' => 'submit',
+                    ])
 
                 </div>
 
@@ -33,7 +33,7 @@
                         'placeholder' => 'Nome',
                         'name' => 'name',
                         'required' => false,
-                        'value'=> ''
+                        'value' => '',
                     ])
 
                     @include('Client.components.inputs.cmp-inp-text', [
@@ -41,8 +41,7 @@
                         'name' => 'cpf',
                         'maskClass' => 'cpf',
                         'required' => false,
-                        'value'=> ''
-
+                        'value' => '',
                     ])
 
                     @include('Client.components.inputs.cmp-inp-text', [
@@ -50,10 +49,10 @@
                         'name' => 'rg',
                         'maskClass' => 'rg',
                         'required' => false,
-                        'value'=> ''
+                        'value' => '',
                     ])
 
-                    </div>
+                </div>
 
                 @include('Client.components.cards.cmp-crd-profile')
 
