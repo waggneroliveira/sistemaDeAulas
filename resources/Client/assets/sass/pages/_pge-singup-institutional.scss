@@ -77,6 +77,7 @@
 
             @include small-device-down {
                 gap: 0 0.5rem;
+                padding: 2rem 1rem;
             }
 
             .cmp-anc-05,
@@ -85,6 +86,7 @@
 
                 @include small-device-down{
                     width: calc(50% - 0.25rem)
+
                 }
             }
 

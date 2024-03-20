@@ -75,12 +75,17 @@
             padding: 2rem 3rem;
             border-radius: 1.25rem 0 1.25rem 1.25rem;
 
+
             &:has(.cmp-crd-profile) &__list {
                 width: calc(65% - 2rem);
 
                 @include medium-device-down {
                     width: 100%;
                 }
+            }
+
+            @include small-device-down {
+                padding: 2rem 1rem;
             }
 
             &__buttons {
