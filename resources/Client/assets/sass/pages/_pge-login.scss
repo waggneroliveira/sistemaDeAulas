@@ -2,64 +2,72 @@
 @use "../utilities/mixins" as *;
 @use "../theme";
 
-.pge-login{
-  height: 100dvh;
+.pge-login {
+    height: 100dvh;
 
-  &__main{
-    @include dis-flex;
-    height: 100%;
+    &__main {
+        @include dis-flex;
+        height: 100%;
 
-    &__form{
-      width: 32rem;
-      padding: 8rem 2.5vw 0;
-      align-self: start;
+        &__form {
+            width: 32rem;
+            padding: 4rem 2.5vw 0;
+            align-self: start;
 
-      @include dis-flex(row, space-between, start);
-      flex-wrap: wrap;
-      gap: 0.5rem;
+            @include dis-flex(row, space-between, start);
+            flex-wrap: wrap;
+            gap: 0.5rem;
 
-      &__logo{
-        margin-inline: auto;
-        width: 9.25rem;
-        height: auto;
-        aspect-ratio: 149/136;
-        object-fit: contain;
-        object-position: center;
-        margin-bottom: 6rem;
-      }
+            @include medium-device-down {
+                width: 100%;
+                align-items: center;
+            }
 
-      &__keep-connected{
-        width: calc(50% - .5rem);
+            &__logo {
+                margin-inline: auto;
+                width: 9.25rem;
+                height: auto;
+                aspect-ratio: 149/136;
+                object-fit: contain;
+                object-position: center;
+                margin-bottom: 6rem;
+            }
 
-        font: 500 .75rem $montserrat;
-        color: $color-white;
-        margin-top: 1rem;
+            &__keep-connected {
+                width: calc(50% - 0.5rem);
 
-        &__input{
-          accent-color: $color-two;
+                font: 500 0.75rem $montserrat;
+                color: $color-white;
+                margin-top: 1rem;
+
+                &__input {
+                    accent-color: $color-two;
+                }
+            }
+
+            &__forgot-password {
+                width: calc(50% - 0.5rem);
+                margin-top: 1rem;
+
+                font: 500 0.75rem $montserrat;
+                color: $color-white;
+                text-align: right;
+            }
+
+            .cmp-btn-03 {
+                margin: 4rem 0 0 auto;
+            }
         }
-      }
 
-      &__forgot-password{
-        width: calc(50% - .5rem);
-        margin-top: 1rem;
+        &__banner {
+            width: calc(100% - 32rem);
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
 
-        font: 500 .75rem $montserrat;
-        color: $color-white;
-        text-align: right;
-      }
-
-      .cmp-btn-03{
-        margin: 4rem 0 0 auto;
-      }
+            @include medium-device-down {
+                display: none;
+            }
+        }
     }
-
-    &__banner{
-      width: calc(100% - 32rem);
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  }
-
 }
