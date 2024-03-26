@@ -32,6 +32,10 @@ Route::get('/password', function () {
     return view('Client.pages.pge-set-password');
 })->name('set-password');
 
+Route::get('/issues', function () {
+    return view('Client.pages.pge-issues');
+})->name('issues');
+
 Route::get('/contato', function () {
     return view('emails.contato');
 });

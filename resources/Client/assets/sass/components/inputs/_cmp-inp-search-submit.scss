@@ -1,0 +1,19 @@
+@use "../../theme";
+
+.cmp-inp-search-submit {
+    @extend %theme__input;
+
+    &__label {
+        @extend %theme__input__label;
+    }
+    &__input {
+        @extend %theme__input__input;
+    }
+
+    &__button{
+      padding: 0;
+      border: none;
+      background-color: transparent;
+
+    }
+}

@@ -17,8 +17,10 @@
 @use "components/inputs/cmp-inp-text";
 @use "components/inputs/cmp-inp-email";
 @use "components/inputs/cmp-inp-password";
+@use "components/inputs/cmp-inp-search-submit";
 
 @use "components/cards/cmp-crd-profile";
+@use "components/cards/cmp-crd-issue";
 
 //main
 // @use "main";
@@ -29,6 +31,7 @@
 @use "pages/pge-signup-personal";
 @use "pages/pge-login";
 @use "pages/pge-set-password";
+@use "pages/pge-issues";
 
 //models
 @use "models/HEADERS/mdl-header";

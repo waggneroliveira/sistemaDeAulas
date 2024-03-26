@@ -1,0 +1,42 @@
+@use "../../theme";
+@use "../../utilities/variables" as *;
+@use "../../utilities/mixins" as *;
+
+.cmp-crd-issue {
+    background-color: $color-black;
+    padding: 0.75rem 1.5rem 1rem;
+    @include dis-flex(row, start, start);
+    width: fit-content;
+    border-radius: 0.5rem;
+
+// FRONTEND: INSERIR O BEFORE DO CARD
+
+    &__icon{
+        width: 3.25rem;
+        height: auto;
+        aspect-ratio: 52/78;
+        margin-right: 1.78rem;
+    }
+
+    &__header {
+        @include dis-flex(column, start, start);
+        margin-right: 2.5rem;
+
+        &__title {
+            font: 600 1rem $montserrat;
+            color: $color-white;
+            margin-bottom: 0.75rem;
+        }
+
+        &__line {
+            width: 50%;
+            border-top: solid 0.25rem $color-one;
+            margin: 0;
+        }
+    }
+
+    .cmp-btn-01 {
+        padding: 0.75rem 2.25rem;
+        align-self: end;
+    }
+}

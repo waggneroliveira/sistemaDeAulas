@@ -20,7 +20,9 @@
 
             @include medium-device-down {
                 width: 100%;
+                height: 100%;
                 align-items: center;
+                align-content: center;
             }
 
             &__logo {
@@ -30,7 +32,7 @@
                 aspect-ratio: 149/136;
                 object-fit: contain;
                 object-position: center;
-                margin-bottom: 6rem;
+                margin-bottom: 4rem;
             }
 
             &__keep-connected {
@@ -55,7 +57,7 @@
             }
 
             .cmp-btn-03 {
-                margin: 4rem 0 0 auto;
+                margin: 1.5rem 0 0 auto;
             }
         }
 
